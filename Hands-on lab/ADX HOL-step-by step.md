@@ -8,7 +8,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
  <!-- TOC -->
 
-- Infrastructure 
+- Infrastructure(#Infrastructure) 
 - Pre-Exploration
 - Stream Analytics
 - Post-Exploration
