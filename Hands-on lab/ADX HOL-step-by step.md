@@ -8,11 +8,11 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
  <!-- TOC -->
 
-- Infrastructure(#Infrastructure) 
-- Pre-Exploration
-- Stream Analytics
-- Post-Exploration
-- Self-Study   
+- [Infrastructure](#infrastructure) 
+- [Pre-Exploration](#Pre-Exploration)
+- [Stream Analytics](Stream Analytics)
+- [Post-Exploration](#Post-Exploration)
+- [Self-Study](#Self-Study)  
   - Kusto Query Language (KQL)
   - Power BI    
      - Connect to Help cluster  
