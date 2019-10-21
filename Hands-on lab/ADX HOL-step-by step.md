@@ -36,19 +36,19 @@ Open Lab from http://bit.ly/2WCFDdz if you haven't registered for lab already.
       
  2. Select **All Services** from left hand pane, Search for **data explorer** and click the **star** icon.
  
-  ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image20.png)
+  ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
   
  3. Drag **Azure Data Explorer Clusters** to the top of the **Favorite** menu.  
  
-   ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image21.png)
+   ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image04.png)
     
  4. Select **Azure Database Explorer** from **Favorite** menu and select the pre-deployed **Kusto cluster**.
    
-       ![Image for selecting Azure Database Cluster.](media/image22.png)
+       ![Image for selecting Azure Database Cluster.](media/image05.png)
     
  5. Select **Databases** from the left-hand menu, under **Data** , and then select **+Add Database** . 
    
-       ![Create a new database in the cluster.](media/image05.png)  
+       ![Create a new database in the cluster.](media/image06.png)  
  
  6. In **Databases**, select your **SAADXWorkshop** and Select **Query**
  
