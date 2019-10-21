@@ -15,8 +15,8 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 - [Self-Study](#Self-Study)  
   - [Kusto Query Language (KQL)](#Kusto-Query-Language)
   - [Power BI](#Power-BI)    
-     - Connect to Help cluster  
-     - Create Power BI report 
+     - [Connect to Help cluster](#Connect-to-Help-cluster)  
+     - [Create Power BI report](#Create-Power-BI-report) 
       
    - [KQL-Results](#KQL-Results)
    
