@@ -8,21 +8,21 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
  <!-- TOC -->
 
-- [Infrastructure](#infrastructure) 
-- [Pre-Exploration](#Pre-Exploration)
-- [Stream Analytics](#Stream-Analytics)
-- [Post-Exploration](#Post-Exploration)
-- [Self-Study](#Self-Study)  
-  - [Kusto Query Language (KQL)](#Kusto-Query-Language)
-  - [Power BI](#Power-BI)    
-     - [Connect to Help cluster](#Connect-to-Help-cluster)  
-     - [Create Power BI report](#Create-Power-BI-report) 
+- Infrastructure(#https://github.com/SpektraSystems/Build-solutions-powered-by-real-time-analytics-using-Azure-Stream-Analytics-and-Azure-Data-Explorer/blob/master/Hands-on%20lab/ADX%20HOL-step-by%20step.md#infrastructure) 
+- Pre-Exploration
+- Stream Analytics
+- Post-Exploration
+- Self-Study   
+  - Kusto Query Language (KQL)
+  - Power BI    
+     - Connect to Help cluster  
+     - Create Power BI report 
       
-   - [KQL-Results](#KQL-Results)
+   - KQL-Results
    
   <!-- TOC -->   
 ## Infrastructure  
-Open Lab from http://bit.ly/2WCFDdz if you haven't registered for lab already.
+Open Lab from http://bit.ly/2Mnel9g if you haven't registered for lab already.
       
 1. Open Azure portal in private mode: https://portal.azure.com in the Virtual Machine (on the left-hand side)
 
