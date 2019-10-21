@@ -133,8 +133,10 @@ Trips
 1. In the Azure portal, click **Create a resource > Internet of Things > Stream Analytics job**.
 2. Name the job **asa_nyctaxi**, specify a subscription, resource group, and location.
 
-Rendered ordered list
+
   > **Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to       transfer data between regions.
+  
+  ![New Stream Analytics Job details view](media/image07.png)
   
 3.Click **Create**.
 
@@ -143,15 +145,19 @@ Rendered ordered list
 
 2. In the **Overview** section of the Stream Analytics job pane, click the **Input** box.
 
+  ![created Stream Analytics Job](media/image08.png)
+
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information:
 
- | Setting                      | Value                         | Description                                                          |                                                                                                                                                                               
+ | Settings                      | Value                         | Description                                                         |                                                                                                                                                                               
  | ---------------------------- |-------------------------------| -------------------------------------------------------------------- |
  | **Input alias**              | **TaxiRide**                  |Enter a name to identify the job’s input.                             |   
  |**Subscription**              | **Your subscription**         |Select the Azure subscription that has the Event Hub you have created | 
  |**Event Hub namespace**       |**predefined EH namespace**    |Enter the name of the Event Hub namespace.                            |
  |**Event Hub name**            |**predefined EH for ASA**      |Select the name of your Event Hub.|
  |**Event Hub policy name**     |**predefined policy**          |Select the access policy that you created earlier.|	
+ 
+ ![created Stream Analytics Job with values](media/image09.png)
  
  4. Click **Create**.
  
@@ -182,7 +188,8 @@ FROM TripData Group By VendorId,tumblingwindow(minute,1)
  ```
  
  Once you have saved this query, you can test it against sample input data. You can obtain sample input data by selecting ‘Reset’. This looks for input data from event hub and shows it in the bottom pane.
- <image>
+ 
+ ![Stream Analytics Job after running the query](media/image10.png)
 
 Once you can see data under “Input preview”, you can select **Test query**. The output will be displayed in “Test results”. When you have the query producing the expected results for test data, you can configure an output. When your job runs in the cloud, this is the destination which it will write the results to in real-time.
 
@@ -197,7 +204,7 @@ For this example, we will add a PowerBI output to your job and create a real-tim
 | Dataset name  | nyctaxi          | 
 | Table name    | nyctaxi-table    | 
 
-<image>
+  ![Added PowerBI output to the Job](media/image11.png)
 	
 3. When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
 4. Click Create.
@@ -208,16 +215,20 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 #### Create the dashboard in Power BI
 1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. If the Stream Analytics job query outputs results, you see that your dataset is already created (under “Datasets” you should be able to see ‘***nyctaxi***’)
 2. In your workspace, click **+ Create**.
-<image>
+
+![Creating powerbi sign-in](media/image12.png)
 	
-3. Create a new dashboard and name it **NYC Taxi**.	
-<image>
+3. Create a new dashboard and name it **NYC Taxi**.
+
+![Creating powerbi dashboard](media/image13.png)
 	
 4. At the top of the window, click **Add tile**, select **CUSTOM STREAMING DATA**, and then click **Next**.
-<image>
+
+![Adding data to Custom Stream Data](media/image14.png)
 	
 5. Under **YOUR DATSETS**, select your dataset and then click **Next**.	
-<image>	
+
+![Adding Datasets to PowerBI](media/image15.png)	
 	  
 6. Under **Visualization Type**, select **Card**, and then in the **Fields** list, select **AvgPassenger**.
 7. Click **Next**.
