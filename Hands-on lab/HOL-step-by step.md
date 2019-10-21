@@ -16,7 +16,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
   - [Kusto Query Language (KQL)](#)
   - [Power BI](#Power-BI)    
      - [Connect to Help cluster](#Connect-to-Help-cluster)  
-     - [Create Power BI report](#Create-Power-BI-report) 
+     - [Create Power BI report](#Create-a-Power-BI-report) 
          
   <!-- TOC -->   
 ## Infrastructure  
