@@ -8,14 +8,14 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
  <!-- TOC -->
 
-- [Infrastructure](#infrastructure)
-- [Pre-Exploration](#Pre-Exploration)
+- [Infrastructure](#infrastructure) 
+- [Pre-Exploration](#Pre-Exploration])
 - [Stream Analytics](#Stream-Analytics)
 - [Post-Exploration](#Post-Exploration)
-- [Self-Study](#Self-Study)  
-  - [Kusto Query Language (KQL)](#kusto-query-language-kql-1)
+- [Self-Study](#Self-Study)   
+  - [Kusto Query Language (KQL)](#)
   - [Power BI](#Power-BI)    
-     - [Connect to Help cluster](#Connect-to-Help-cluster) 
+     - [Connect to Help cluster](#Connect-to-Help-cluster)  
      - [Create Power BI report](#Create-Power-BI-report) 
       
    - [KQL-Results](#KQL-Results)
@@ -26,9 +26,9 @@ Open Lab from http://bit.ly/2Mnel9g if you haven't registered for lab already.
       
 1. Open Azure portal in private mode: https://portal.azure.com in the Virtual Machine (on the left-hand side)
 
-   - Connect with the **Azure Credentials** from **Environment Details** tab.
+      - Connect with the **Azure Credentials** from **Environment Details** tab.
    
-	 ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
+![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
    - The portal opens with your credentials:  
       
@@ -53,11 +53,11 @@ Open Lab from http://bit.ly/2Mnel9g if you haven't registered for lab already.
  6. In **Databases**, select your **SAADXWorkshop** and Select **Query**
  
        ![writing Query fo the data ingestion section.](media/image07.png)
-   
+    
  7. In the Web UI, select **Open on Web UI**
    
        ![writing Query in ADX in Web UI .](media/image08.png)
-  
+    
 ## Pre-Exploration 
 ### Kusto Query Language (KQL) 
 -  | **count**	
@@ -132,7 +132,9 @@ Trips
 ### Create the job
 1. In the Azure portal, click **Create a resource > Internet of Things > Stream Analytics job**.
 2. Name the job **asa_nyctaxi**, specify a subscription, resource group, and location.
-> **Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to transfer data between regions.</br>
+
+
+  > **Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to       transfer data between regions.
   
    ![New Stream Analytics Job details view](media/image09.png)
   
@@ -270,7 +272,7 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
 ## Connect to Help cluster  
 1. Connect with the **Azure Credentials** from **Environment Details** tab.
 
-      ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right..](media/image18.png "Azure Portal")  
+      ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right..]  (media/image18.png "Azure Portal")  
 
 2. Open Power BI desktop, select **Get Data**, and **More…** Type **Data Explorer** in the search box.
 
@@ -316,11 +318,11 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
  5. Create a pie chart of reporting sources by putting the **“Source”** in the legend box and putting the (count) **“EventId”** in the values box.  
  
-       ![Image which shows the pie chart with legend box value box.](media/image28.png)  
+ ![Image which shows the pie chart with legend box value box.](media/image28.png)  
  
  6. Now arrange the tiles on the canvas and you’re ready to slice and dice.  
  
-       ![Image which shows the complete analysis of the database.](media/image29.png)  
+ ![Image which shows the complete analysis of the database.](media/image29.png)  
  
  ### 3 Power BI Connectors  
  1. Native Connector for Power BI
