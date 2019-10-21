@@ -8,17 +8,17 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
  <!-- TOC -->
 
-- Infrastructure(#https://github.com/SpektraSystems/Build-solutions-powered-by-real-time-analytics-using-Azure-Stream-Analytics-and-Azure-Data-Explorer/blob/master/Hands-on%20lab/ADX%20HOL-step-by%20step.md#infrastructure) 
-- Pre-Exploration
-- Stream Analytics
-- Post-Exploration
-- Self-Study   
-  - Kusto Query Language (KQL)
-  - Power BI    
-     - Connect to Help cluster  
-     - Create Power BI report 
+- [Infrastructure](#infrastructure) 
+- [Pre-Exploration](#Pre-Exploration])
+- [Stream Analytics](#Stream Analytics)
+- [Post-Exploration](#Post-Exploration)
+- [Self-Study](#Self-Study)   
+  - [Kusto Query Language (KQL)](#)
+  - [Power BI](#Power-BI)    
+     - [Connect to Help cluster](#Connect-to-Help-cluster)  
+     - [Create Power BI report](#Create-Power-BI-report) 
       
-   - KQL-Results
+   - [KQL-Results](#KQL-Results)
    
   <!-- TOC -->   
 ## Infrastructure  
