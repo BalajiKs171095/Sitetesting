@@ -220,15 +220,15 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 	
 3. Create a new dashboard and name it **NYC Taxi**.
 
-![Creating powerbi dashboard](media/image13.png)
+![Creating powerbi dashboard](media/image15.png)
 	
 4. At the top of the window, click **Add tile**, select **CUSTOM STREAMING DATA**, and then click **Next**.
 
-![Adding data to Custom Stream Data](media/image14.png)
+![Adding data to Custom Stream Data](media/image16.png)
 	
 5. Under **YOUR DATSETS**, select your dataset and then click **Next**.	
 
-![Adding Datasets to PowerBI](media/image15.png)	
+![Adding Datasets to PowerBI](media/image17.png)	
 	  
 6. Under **Visualization Type**, select **Card**, and then in the **Fields** list, select **AvgPassenger**.
 7. Click **Next**.
