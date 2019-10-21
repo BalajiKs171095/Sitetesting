@@ -9,7 +9,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  <!-- TOC -->
 
 - [Infrastructure](#infrastructure) 
-- [Pre-Exploration](#Pre-Exploration])
+- [Pre-Exploration](#Pre-Exploration)
 - [Stream Analytics](#Stream-Analytics)
 - [Post-Exploration](#Post-Exploration)
 - [Self-Study](#Self-Study)   
