@@ -136,7 +136,7 @@ Trips
 
   > **Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to       transfer data between regions.
   
-  ![New Stream Analytics Job details view](media/image07.png)
+  ![New Stream Analytics Job details view](media/image09.png)
   
 3.Click **Create**.
 
@@ -145,7 +145,7 @@ Trips
 
 2. In the **Overview** section of the Stream Analytics job pane, click the **Input** box.
 
-  ![created Stream Analytics Job](media/image08.png)
+  ![created Stream Analytics Job](media/image10.png)
 
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information:
 
@@ -157,7 +157,7 @@ Trips
  |**Event Hub name**            |**predefined EH for ASA**      |Select the name of your Event Hub.|
  |**Event Hub policy name**     |**predefined policy**          |Select the access policy that you created earlier.|	
  
- ![created Stream Analytics Job with values](media/image09.png)
+ ![created Stream Analytics Job with values](media/image11.png)
  
  4. Click **Create**.
  
@@ -189,7 +189,7 @@ FROM TripData Group By VendorId,tumblingwindow(minute,1)
  
  Once you have saved this query, you can test it against sample input data. You can obtain sample input data by selecting ‘Reset’. This looks for input data from event hub and shows it in the bottom pane.
  
- ![Stream Analytics Job after running the query](media/image10.png)
+ ![Stream Analytics Job after running the query](media/image12.png)
 
 Once you can see data under “Input preview”, you can select **Test query**. The output will be displayed in “Test results”. When you have the query producing the expected results for test data, you can configure an output. When your job runs in the cloud, this is the destination which it will write the results to in real-time.
 
@@ -204,7 +204,7 @@ For this example, we will add a PowerBI output to your job and create a real-tim
 | Dataset name  | nyctaxi          | 
 | Table name    | nyctaxi-table    | 
 
-  ![Added PowerBI output to the Job](media/image11.png)
+  ![Added PowerBI output to the Job](media/image13.png)
 	
 3. When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
 4. Click Create.
@@ -216,7 +216,7 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. If the Stream Analytics job query outputs results, you see that your dataset is already created (under “Datasets” you should be able to see ‘***nyctaxi***’)
 2. In your workspace, click **+ Create**.
 
-![Creating powerbi sign-in](media/image12.png)
+![Creating powerbi sign-in](media/image14.png)
 	
 3. Create a new dashboard and name it **NYC Taxi**.
 
