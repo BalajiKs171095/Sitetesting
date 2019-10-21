@@ -194,7 +194,7 @@ Once you can see data under “Input preview”, you can select **Test query**. 
 For this example, we will add a PowerBI output to your job and create a real-time dashboard that visualizes average passenger count over time.
 
  1. On the left menu, select Outputs under Job topology. Then, select + Add and choose Power BI from the dropdown menu.
- 2. Select + Add > Power BI. Then fill the form with the following details and select **Authorize**:
+ 2. Select + Add > Power BI. Then fill the form with the following details and select **Authorize**
  
  | **Setting** | **Second Header** |
 | ------------- | ---------------- |
