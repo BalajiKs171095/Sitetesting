@@ -8,17 +8,17 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
  <!-- TOC -->
 
-- [Infrastructure](#infrastructure) 
-- [Pre-Exploration](#Pre-Exploration])
-- [Stream Analytics](#Stream-Analytics)
-- [Post-Exploration](#Post-Exploration)
-- [Self-Study](#Self-Study)   
-  - [Kusto Query Language (KQL)](#)
-  - [Power BI](#Power-BI)    
-     - [Connect to Help cluster](#Connect-to-Help-cluster)  
-     - [Create Power BI report](#Create-Power-BI-report) 
+- Infrastructure(#https://github.com/SpektraSystems/Build-solutions-powered-by-real-time-analytics-using-Azure-Stream-Analytics-and-Azure-Data-Explorer/blob/master/Hands-on%20lab/ADX%20HOL-step-by%20step.md#infrastructure) 
+- Pre-Exploration
+- Stream Analytics
+- Post-Exploration
+- Self-Study   
+  - Kusto Query Language (KQL)
+  - Power BI    
+     - Connect to Help cluster  
+     - Create Power BI report 
       
-   - [KQL-Results](#KQL-Results)
+   - KQL-Results
    
   <!-- TOC -->   
 ## Infrastructure  
@@ -32,15 +32,15 @@ Open Lab from http://bit.ly/2Mnel9g if you haven't registered for lab already.
 
    - The portal opens with your credentials:  
       
-      ![portal will bw opened with the credentials provide.](media/image02.png "Azure Portal")
+        ![portal will bw opened with the credentials provide.](media/image02.png "Azure Portal")
       
  2. Select **All Services** from left hand pane, Search for **data explorer** and click the **star** icon.
  
-   ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
+       ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
   
  3. Drag **Azure Data Explorer Clusters** to the top of the **Favorite** menu.  
  
-   ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image04.png)
+       ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image04.png)
     
  4. Select **Azure Database Explorer** from **Favorite** menu and select the pre-deployed **SAADXWorkshop cluster**.
    
@@ -52,11 +52,11 @@ Open Lab from http://bit.ly/2Mnel9g if you haven't registered for lab already.
  
  6. In **Databases**, select your **SAADXWorkshop** and Select **Query**
  
-   ![writing Query fo the data ingestion section.](media/image07.png)
+       ![writing Query fo the data ingestion section.](media/image07.png)
    
  7. In the Web UI, select **Open on Web UI**
    
-   ![writing Query in ADX in Web UI .](media/image08.png)
+       ![writing Query in ADX in Web UI .](media/image08.png)
   
 ## Pre-Exploration 
 ### Kusto Query Language (KQL) 
@@ -136,7 +136,7 @@ Trips
 
   > **Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to       transfer data between regions.
   
-  ![New Stream Analytics Job details view](media/image09.png)
+   ![New Stream Analytics Job details view](media/image09.png)
   
 3.Click **Create**.
 
@@ -145,7 +145,7 @@ Trips
 
 2. In the **Overview** section of the Stream Analytics job pane, click the **Input** box.
 
-  ![created Stream Analytics Job](media/image10.png)
+      ![created Stream Analytics Job](media/image10.png)
 
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information:
 
@@ -157,7 +157,7 @@ Trips
  |**Event Hub name**            |**predefined EH for ASA**      |Select the name of your Event Hub.|
  |**Event Hub policy name**     |**predefined policy**          |Select the access policy that you created earlier.|	
  
- ![created Stream Analytics Job with values](media/image11.png)
+   ![created Stream Analytics Job with values](media/image11.png)
  
  4. Click **Create**.
  
@@ -189,7 +189,7 @@ FROM TripData Group By VendorId,tumblingwindow(minute,1)
  
  Once you have saved this query, you can test it against sample input data. You can obtain sample input data by selecting ‘Reset’. This looks for input data from event hub and shows it in the bottom pane.
  
- ![Stream Analytics Job after running the query](media/image12.png)
+   ![Stream Analytics Job after running the query](media/image12.png)
 
 Once you can see data under “Input preview”, you can select **Test query**. The output will be displayed in “Test results”. When you have the query producing the expected results for test data, you can configure an output. When your job runs in the cloud, this is the destination which it will write the results to in real-time.
 
@@ -204,7 +204,7 @@ For this example, we will add a PowerBI output to your job and create a real-tim
 | Dataset name  | nyctaxi          | 
 | Table name    | nyctaxi-table    | 
 
-  ![Added PowerBI output to the Job](media/image13.png)
+   ![Added PowerBI output to the Job](media/image13.png)
 	
 3. When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
 4. Click Create.
@@ -216,19 +216,19 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. If the Stream Analytics job query outputs results, you see that your dataset is already created (under “Datasets” you should be able to see ‘***nyctaxi***’)
 2. In your workspace, click **+ Create**.
 
-![Creating powerbi sign-in](media/image14.png)
+      ![Creating powerbi sign-in](media/image14.png)
 	
 3. Create a new dashboard and name it **NYC Taxi**.
 
-![Creating powerbi dashboard](media/image15.png)
+      ![Creating powerbi dashboard](media/image15.png)
 	
 4. At the top of the window, click **Add tile**, select **CUSTOM STREAMING DATA**, and then click **Next**.
 
-![Adding data to Custom Stream Data](media/image16.png)
+      ![Adding data to Custom Stream Data](media/image16.png)
 	
 5. Under **YOUR DATSETS**, select your dataset and then click **Next**.	
 
-![Adding Datasets to PowerBI](media/image17.png)	
+      ![Adding Datasets to PowerBI](media/image17.png)	
 	  
 6. Under **Visualization Type**, select **Card**, and then in the **Fields** list, select **AvgPassenger**.
 7. Click **Next**.
@@ -272,15 +272,15 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
 ## Connect to Help cluster  
 1. Connect with the **Azure Credentials** from **Environment Details** tab.
 
-![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right..](media/image18.png "Azure Portal")  
+      ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right..](media/image18.png "Azure Portal")  
 
 2. Open Power BI desktop, select **Get Data**, and **More…** Type **Data Explorer** in the search box.
 
-![Power BI desktop for you can do data analytics.](media/image19.png)  
+      ![Power BI desktop for you can do data analytics.](media/image19.png)  
 
 3. Select **Azure Data Explorer (Kusto)** and **Connect** 
 
-![You can select the database to be analysed.](media/image20.png)  
+      ![You can select the database to be analysed.](media/image20.png)  
 
 4. Enter the following properties (leave all other fields empty) and then select **OK**  
  Cluster: **Help**  
@@ -288,41 +288,41 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  Table name or Azure Data Explorer query: **StormEvents**  
  Data Connectivity mode: **Import**  
  
- ![Required parameters to analyse the database.](media/image21.png) 
+   ![Required parameters to analyse the database.](media/image21.png) 
  
  5. Expand the Samples database and select StormEvents. If the table looks ok, select **Load**. To make changes, select **Edit**. 
  
- ![Image which resemble the sample database.](media/image22.png)  
+       ![Image which resemble the sample database.](media/image22.png)  
  
  6. The new StormEvents table was added to the Power BI report.  
  
- ![Image which shows the newly events added to the Power BI.](media/image23.png)  
+       ![Image which shows the newly events added to the Power BI.](media/image23.png)  
  
  ### Create a Power BI report  
  
  1. Create a line chart with the total number of events, by putting “Start Time” in the Axis box (not in Date Hierarchy mode) and     **EventId** in the Values box.  
  
- ![Image which shows the environmrline chart of the database.](media/image24.png)  
+       ![Image which shows the environmrline chart of the database.](media/image24.png)  
  
  2. Add a Map tile by putting **“BeginLat”** in the Latitude box and putting **“BeginLon”** in the Longitude box.  
  
- ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longitue Box.](media/image25.png)  
+       ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longitue Box.](media/image25.png)  
  
  3. Create a Clustered column chart by putting **“Event Type”** in the Axis box and (count) **“Event Id”** in the value box.  
  
- ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
+       ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
  
  4. Create 4 separate card tiles with **“DeathDirect”**, **“DeathIndirect”**, **“InjuriesDirect”** and **“InjuriesIndirect** in the Fields box.  
  
- ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
+       ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
  
  5. Create a pie chart of reporting sources by putting the **“Source”** in the legend box and putting the (count) **“EventId”** in the values box.  
  
- ![Image which shows the pie chart with legend box value box.](media/image28.png)  
+       ![Image which shows the pie chart with legend box value box.](media/image28.png)  
  
  6. Now arrange the tiles on the canvas and you’re ready to slice and dice.  
  
- ![Image which shows the complete analysis of the database.](media/image29.png)  
+       ![Image which shows the complete analysis of the database.](media/image29.png)  
  
  ### 3 Power BI Connectors  
  1. Native Connector for Power BI
