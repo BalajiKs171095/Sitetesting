@@ -8,9 +8,9 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
  <!-- TOC -->
 
-- Infrastructure(#https://github.com/SpektraSystems/Build-solutions-powered-by-real-time-analytics-using-Azure-Stream-Analytics-and-Azure-Data-Explorer/blob/master/Hands-on%20lab/ADX%20HOL-step-by%20step.md#infrastructure) 
-- Pre-Exploration
-- Stream Analytics
+- [Infrastructure](#infrastructure)
+- [Pre-Exploration](#Pre-Exploration)
+- [Stream Analytics](#Stream-Analytics)
 - Post-Exploration
 - Self-Study   
   - Kusto Query Language (KQL)
@@ -132,9 +132,7 @@ Trips
 ### Create the job
 1. In the Azure portal, click **Create a resource > Internet of Things > Stream Analytics job**.
 2. Name the job **asa_nyctaxi**, specify a subscription, resource group, and location.
-
-
-  > **Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to       transfer data between regions.
+> **Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to transfer data between regions.</br>
   
    ![New Stream Analytics Job details view](media/image09.png)
   
