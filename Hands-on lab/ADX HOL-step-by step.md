@@ -272,15 +272,15 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
 ## Connect to Help cluster  
 1. Connect with the **Azure Credentials** from **Environment Details** tab.
 
-![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right..](media/image01.png "Azure Portal")  
+![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right..](media/image18.png "Azure Portal")  
 
 2. Open Power BI desktop, select **Get Data**, and **More…** Type **Data Explorer** in the search box.
 
-![Power BI desktop for you can do data analytics.](media/image10.png)  
+![Power BI desktop for you can do data analytics.](media/image19.png)  
 
 3. Select **Azure Data Explorer (Kusto)** and **Connect** 
 
-![You can select the database to be analysed.](media/image11.png)  
+![You can select the database to be analysed.](media/image20.png)  
 
 4. Enter the following properties (leave all other fields empty) and then select **OK**  
  Cluster: **Help**  
@@ -288,41 +288,41 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  Table name or Azure Data Explorer query: **StormEvents**  
  Data Connectivity mode: **Import**  
  
- ![Required parameters to analyse the database.](media/image12.png) 
+ ![Required parameters to analyse the database.](media/image21.png) 
  
  5. Expand the Samples database and select StormEvents. If the table looks ok, select **Load**. To make changes, select **Edit**. 
  
- ![Image which resemble the sample database.](media/image13.png)  
+ ![Image which resemble the sample database.](media/image22.png)  
  
  6. The new StormEvents table was added to the Power BI report.  
  
- ![Image which shows the newly events added to the Power BI.](media/image14.png)  
+ ![Image which shows the newly events added to the Power BI.](media/image23.png)  
  
  ### Create a Power BI report  
  
  1. Create a line chart with the total number of events, by putting “Start Time” in the Axis box (not in Date Hierarchy mode) and     EventId in the Values box.  
  
- ![Image which shows the environmrline chart of the database.](media/image14.png)  
+ ![Image which shows the environmrline chart of the database.](media/image24.png)  
  
  2. Add a Map tile by putting “BeginLat” in the Latitude box and putting “BeginLon” in the Longitude box.  
  
- ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longitue Box.](media/image15.png)  
+ ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longitue Box.](media/image25.png)  
  
  3. Create a Clustered column chart by putting “Event Type” in the Axis box and (count) “Event Id” in the value box.  
  
- ![Image which shows the line chart with Event Type and Event Id.](media/image16.png)  
+ ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
  
  4. Create 4 separate card tiles with “DeathDirect”, “DeathIndirect”, “InjuriesDirect” and “InjuriesIndirect in the Fields box.  
  
- ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image17.png)  
+ ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
  
  5. Create a pie chart of reporting sources by putting the “Source” in the legend box and putting the (count) “EventId” in the values   box.  
  
- ![Image which shows the pie chart with legend box value box.](media/image18.png)  
+ ![Image which shows the pie chart with legend box value box.](media/image28.png)  
  
  6. Now arrange the tiles on the canvas and you’re ready to slice and dice.  
  
- ![Image which shows the complete analysis of the database.](media/image19.png)  
+ ![Image which shows the complete analysis of the database.](media/image29.png)  
  
  ### 3 Power BI Connectors  
  1. Native Connector for Power BI
