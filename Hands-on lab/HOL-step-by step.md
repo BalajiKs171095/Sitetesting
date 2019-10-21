@@ -11,9 +11,9 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 - [Infrastructure](#infrastructure)
 - [Pre-Exploration](#Pre-Exploration)
 - [Stream Analytics](#Stream-Analytics)
-- Post-Exploration
-- Self-Study   
-  - Kusto Query Language (KQL)
+- [Post-Exploration](#Post-Exploration)
+- [Self-Study](#Self-Study)  
+  - [Kusto Query Language (KQL)]()
   - Power BI    
      - Connect to Help cluster  
      - Create Power BI report 
