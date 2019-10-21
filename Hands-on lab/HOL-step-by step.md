@@ -13,7 +13,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 - [Stream Analytics](#Stream-Analytics)
 - [Post-Exploration](#Post-Exploration)
 - [Self-Study](#Self-Study)   
-  - [Kusto Query Language (KQL)](#)
+  - [Kusto Query Language (KQL)](#kusto-query-language-kql-1)
   - [Power BI](#Power-BI)    
      - [Connect to Help cluster](#Connect-to-Help-cluster)  
      - [Create Power BI report](#Create-a-Power-BI-report) 
