@@ -125,7 +125,8 @@ Trips
 | summarize percentiles(passenger_count, 50, 90, 99)
   ```
 
-## **Stream Analytics**
+## Stream Analytics
+
 
 ### Create the Job
 
