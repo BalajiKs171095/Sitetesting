@@ -124,9 +124,10 @@ Trips
 Trips
 | summarize percentiles(passenger_count, 50, 90, 99)
   ```
-### Stream Analytics
+## Stream Analytics
 
-**Create the job**
+**Create the job** 
+
 1. In the Azure portal, click **Create a resource > Internet of Things > Stream Analytics job**.
 2. Name the job **asa_nyctaxi**, specify a subscription, resource group, and location.
 
