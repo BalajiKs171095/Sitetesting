@@ -129,15 +129,15 @@ Trips
 
 ### &nbsp;&nbsp;&nbsp;Create the Job
 
-1. In the Azure portal, click **Create a resource > Internet of Things > Stream Analytics job**.
+i. In the Azure portal, click **Create a resource > Internet of Things > Stream Analytics job**.
 
-2. Name the job **asa_nyctaxi**, specify a subscription, resource group, and location.
+ii. Name the job **asa_nyctaxi**, specify a subscription, resource group, and location.
 
 >**Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to transfer data between regions.
 
 ![New Stream Analytics Job details view](media/image09.png)
 
-3.Click **Create**.
+iii. Click **Create**.
 
 ### Configure job input
 1. In the dashboard or the **All resources** pane, find and select the **asa_nyctaxi** Stream Analytics job.
