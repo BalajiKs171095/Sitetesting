@@ -20,13 +20,12 @@ Walk away with a solution for your frustrated customers, so they can make immedi
          
   <!-- TOC -->   
 ## Infrastructure  
-Open Lab from http://bit.ly/2Mnel9g if you haven't registered for lab already.
-      
+
 1. Open Azure portal in private mode: https://portal.azure.com in the Virtual Machine (on the left-hand side)
 
       - Connect with the **Azure Credentials** from **Environment Details** tab.
    
-![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
+      ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
    - The portal opens with your credentials:  
       
