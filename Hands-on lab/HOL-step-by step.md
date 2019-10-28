@@ -201,7 +201,6 @@ For this example, we will add a PowerBI output to your job and create a real-tim
 
  | **Setting**   | **Second Header**|
  | ------------- | ---------------- |
- | ------------- | ---------------- |
  | Output alias  | pbioutput|
  | Dataset name  | nyctaxi| 
  | Table name    | nyctaxi-table| 
