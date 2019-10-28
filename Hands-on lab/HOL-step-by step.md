@@ -188,8 +188,8 @@ FROM TripData Group By VendorId,tumblingwindow(minute,1)
 ```
  
  Once you have saved this query, you can test it against sample input data. You can obtain sample input data by selecting ‘Reset’. This looks for input data from event hub and shows it in the bottom pane.
- 
-   ![Stream Analytics Job after running the query](media/image12.png)
+
+  ![Stream Analytics Job after running the query](media/image12.png)
 
 Once you can see data under “Input preview”, you can select **Test query**. The output will be displayed in “Test results”. When you have the query producing the expected results for test data, you can configure an output. When your job runs in the cloud, this is the destination which it will write the results to in real-time.
 
@@ -219,11 +219,11 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 
 2. In your workspace, click **+ Create**.
 
-   ![Creating powerbi sign-in](media/image14.png)
+    ![Creating powerbi sign-in](media/image14.png)
 	
 3. Create a new dashboard and name it **NYC Taxi**.
 
-   ![Creating powerbi dashboard](media/image15.png)
+    ![Creating powerbi dashboard](media/image15.png)
 	
 4. At the top of the window, click **Add tile**, select **CUSTOM STREAMING DATA**, and then click **Next**.
 
@@ -241,20 +241,20 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 
 ## Post-Exploration
 1. Select Azure Database Explorer from Favorite menu and select the pre-deployed nycXXX cluster
-          
-   ![Image of selecting ADX cluster](media/image33.png) 
+    
+    ![Image of selecting ADX cluster](media/image33.png) 
 	  
 2. Select Databases from the left-hand menu, under Data , and then select TaxiRides
           
-   ![Image of selecting ADX database cluster](media/image31.png)
+    ![Image of selecting ADX database cluster](media/image31.png)
 	   
 3. In Databases, select TaxiRides and Select Query
          
-   ![writing Query fo the data ingestion section](media/image07.png)
+    ![writing Query fo the data ingestion section](media/image07.png)
 	 
 4. In the Web UI, select Open on Web UI  
         
-   ![writing Query in ADX in Web UI .](media/image08.png)
+    ![writing Query in ADX in Web UI .](media/image08.png)
 	
 ### Questions
   1. What was the fare amount of the last trip which pass the 90 percentiles? 
@@ -299,15 +299,15 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
 ## Connect to Help cluster  
 1. Connect with the **Azure Credentials** from **Environment Details** tab.
 
-   ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
+    ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
 2. Open Power BI desktop, select **Get Data**, and **More…** Type **Data Explorer** in the search box.
 
-   ![Power BI desktop for you can do data analytics.](media/image19.png)  
+    ![Power BI desktop for you can do data analytics.](media/image19.png)  
 
 3. Select **Azure Data Explorer (Kusto)** and **Connect** 
 
-   ![You can select the database to be analysed.](media/image20.png)  
+    ![You can select the database to be analysed.](media/image20.png)  
 
 4. Enter the following properties (leave all other fields empty) and then select **OK**  
    Cluster: **Help**  
@@ -315,22 +315,22 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
    Table name or Azure Data Explorer query: **StormEvents**  
    Data Connectivity mode: **Import**  
  
-   ![Required parameters to analyse the database.](media/image21.png) 
+    ![Required parameters to analyse the database.](media/image21.png) 
  
 5. Expand the Samples database and select StormEvents. If the table looks ok, select **Load**. To make changes, select **Edit**. 
  
-   ![Image which resemble the sample database.](media/image22.png)  
+    ![Image which resemble the sample database.](media/image22.png)  
  
 6. The new StormEvents table was added to the Power BI report.  
  
-   ![Image which shows the newly events added to the Power BI.](media/image23.png)  
+    ![Image which shows the newly events added to the Power BI.](media/image23.png)  
  
  ### Create a Power BI report  
  
  1. Create a line chart with the total number of events, by putting “Start Time” in the Axis box (not in Date Hierarchy mode) and     **EventId** in the Values box.  
  
-   ![Image which shows the environmrline chart of the database.](media/image24.png)  
- 
+    ![Image which shows the environmrline chart of the database.](media/image24.png)  
+  
  2. Add a Map tile by putting **“BeginLat”** in the Latitude box and putting **“BeginLon”** in the Longitude box.  
  
     ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longitue Box.](media/image25.png)  
