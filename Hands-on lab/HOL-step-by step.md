@@ -271,7 +271,7 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
 ## Connect to Help cluster  
 1. Connect with the **Azure Credentials** from **Environment Details** tab.
 
-      ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right..]  (media/image18.png "Azure Portal")  
+      ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
 2. Open Power BI desktop, select **Get Data**, and **More…** Type **Data Explorer** in the search box.
 
