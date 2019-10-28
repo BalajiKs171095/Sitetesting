@@ -261,24 +261,24 @@ Trips
 | project fare_amount, vendor_id, passenger_count
 
  ``` 
-  2. What was the fare amount for the trip with the max passenger count?
- ```  
-Trips
-| where passenger_count > 4 
-| top 1 by passenger_count 
-| project fare_amount, vendor_id, passenger_count 
+  2. What was the fare amount for the trip with the max passenger count? 
+ ```   
+Trips 
+| where passenger_count > 4  
+| top 1 by passenger_count  
+| project fare_amount, vendor_id, passenger_count  
 
-``` 
-  3. How many trips this vendor has? 
- ```
-Trips
-| summarize count() by vendor_id
-----
-Trips
-| where vendor_id == 2
-| count
+```  
+  3. How many trips this vendor has?  
+ ``` 
+Trips 
+| summarize count() by vendor_id 
+---- 
+Trips 
+| where vendor_id == 2 
+| count 
 
- ```
+ ``` 
 
 ## Self-Study  
   
