@@ -234,6 +234,20 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 8. Fill in tile details like a title and subtitle and click **Apply**. Now you have a visualization for average no. of passengers in a trip.You can try playing around by creating a line chart which plots average passenger count over a period of time (x axis: timestamps and y axis: AvgPassenger).
 
 ## Post-Exploration
+1. Select Azure Database Explorer from Favorite menu and select the pre-deployed nycXXX cluster
+          
+	  ![Image of selecting ADX cluster](media/image33.png) 
+	  
+2. Select Databases from the left-hand menu, under Data , and then select TaxiRides
+          
+	  ![Image of selecting ADX database cluster](media/image31.png)
+	   
+3. In Databases, select TaxiRides and Select Query
+         ![writing Query fo the data ingestion section](media/image07.png)
+	 
+4. In the Web UI, select Open on Web UI  
+         ![writing Query in ADX in Web UI .](media/image08.png)
+	
 ### Questions
 1. What was the fare amount of the last trip which pass the 90 percentiles? 
  ```
