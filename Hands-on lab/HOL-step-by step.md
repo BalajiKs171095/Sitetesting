@@ -315,11 +315,11 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
 5. Expand the Samples database and select StormEvents. If the table looks ok, select **Load**. To make changes, select **Edit**. 
  
-       ![Image which resemble the sample database.](media/image22.png)  
+      ![Image which resemble the sample database.](media/image22.png)  
  
 6. The new StormEvents table was added to the Power BI report.  
  
-       ![Image which shows the newly events added to the Power BI.](media/image23.png)  
+      ![Image which shows the newly events added to the Power BI.](media/image23.png)  
  
  ### Create a Power BI report  
  
