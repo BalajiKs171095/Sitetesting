@@ -278,7 +278,6 @@ Trips
 Trips
 | where vendor_id == 2
 | count
-
  ``` 
 
 ## Self-Study  
