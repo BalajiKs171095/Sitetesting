@@ -263,7 +263,7 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
  
  2. What was the fare amount for the trip with the max passenger count?
 ```
-  Trips
+ Trips
 | where passenger_count > 4  
 | top 1 by passenger_count 
 | project fare_amount, vendor_id, passenger_count 
@@ -271,10 +271,10 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
  
  3. How many trips this vendor has? 
 ``` 
-Trips 
+ Trips 
 | summarize count() by vendor_id 
 ---- 
-Trips 
+ Trips 
 | where vendor_id == 2 
 | count 
 ``` 
