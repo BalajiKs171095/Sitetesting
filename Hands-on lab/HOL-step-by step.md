@@ -199,16 +199,12 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  2. Select + Add > Power BI. Then fill the form with the following details and select **Authorize**.
 
 
- | **Settings**  | **Second Header**|
- |---------------|------------------|
- | Output alias   |pbioutput|
- | Dataset name   |nyctaxi| 
- |Table name     |nyctaxi-table| 
+ | **Settings**       | **Second Header**|
+ |--------------------|------------------|
+ | Output alias       | pbioutput|
+ | Dataset name       | nyctaxi| 
+ |Table name          | nyctaxi-table| 
  
-  | Value                     | Description                                                                                                                                                                                                                            |
-   | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | **Azure subscription ID** | The Azure subscription ID to use for AKS. You can list all of your subscriptions and their IDs by running `az account list` from another command line.                                                                                 |
-
    ![Added PowerBI output to the Job](media/image13.png)
 	
 3. When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
