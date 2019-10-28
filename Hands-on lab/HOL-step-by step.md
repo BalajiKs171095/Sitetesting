@@ -199,15 +199,16 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  2. Select + Add > Power BI. Then fill the form with the following details and select **Authorize**.
 
 
- | **Settings**       | **Second Header**|
- |--------------------|------------------|
- | Output alias       | pbioutput        |
- | Dataset name       | nyctaxi          | 
- | Table name         | nyctaxi-table    | 
+ | **Settings**        | **Second Header**|
+ |---------------------|------------------|
+ | Output alias        | pbioutput        |
+ | Dataset name        | nyctaxi          | 
+ | Table name          | nyctaxi-table    | 
  
    ![Added PowerBI output to the Job](media/image13.png)
 	
 3. When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
+
 4. Click Create.
 	
 ### Run the job
@@ -215,6 +216,7 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 
 #### Create the dashboard in Power BI
 1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. If the Stream Analytics job query outputs results, you see that your dataset is already created (under “Datasets” you should be able to see ‘***nyctaxi***’)
+
 2. In your workspace, click **+ Create**.
 
       ![Creating powerbi sign-in](media/image14.png)
@@ -232,7 +234,9 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
       ![Adding Datasets to PowerBI](media/image17.png)	
 	  
 6. Under **Visualization Type**, select **Card**, and then in the **Fields** list, select **AvgPassenger**.
+
 7. Click **Next**.
+
 8. Fill in tile details like a title and subtitle and click **Apply**. Now you have a visualization for average no. of passengers in a trip.You can try playing around by creating a line chart which plots average passenger count over a period of time (x axis: timestamps and y axis: AvgPassenger).
 
 ## Post-Exploration
@@ -306,10 +310,10 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
       ![You can select the database to be analysed.](media/image20.png)  
 
 4. Enter the following properties (leave all other fields empty) and then select **OK**  
- Cluster: **Help**  
- Database: **Samples**  
- Table name or Azure Data Explorer query: **StormEvents**  
- Data Connectivity mode: **Import**  
+   Cluster: **Help**  
+   Database: **Samples**  
+   Table name or Azure Data Explorer query: **StormEvents**  
+   Data Connectivity mode: **Import**  
  
    ![Required parameters to analyse the database.](media/image21.png) 
  
