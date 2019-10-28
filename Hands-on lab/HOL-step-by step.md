@@ -170,7 +170,7 @@ Trips
  Select “*Query*” under Job Topology and paste the following in the query text box.
  
  ```
- --SELECT all relevant fields from TaxiRide Streaming input
+ SELECT all relevant fields from TaxiRide Streaming input
  WITH 
 TripData AS (
     SELECT TRY_CAST(pickupLat AS float) as pickupLat,
