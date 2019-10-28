@@ -29,11 +29,11 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
    - The portal opens with your credentials:  
       
-   ![portal will bw opened with the credentials provide.](media/image02.png "Azure Portal")
+    ![portal will bw opened with the credentials provide.](media/image02.png "Azure Portal")
       
  2. Select **All Services** from left hand pane, Search for **data explorer** and click the **star** icon.
  
-   ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
+    ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
   
  3. Drag **Azure Data Explorer Clusters** to the top of the **Favorite** menu.  
  
@@ -45,15 +45,15 @@ Walk away with a solution for your frustrated customers, so they can make immedi
     
  5. Select **Databases** from the left-hand menu, under **Data** , and then select **+SAADXworkshop** . 
    
-     ![Create a new database in the cluster.](media/image31.png)  
+    ![Create a new database in the cluster.](media/image31.png)  
  
  6. In **Databases**, select your **SAADXWorkshop** and Select **Query**
  
-     ![writing Query fo the data ingestion section.](media/image07.png)
+    ![writing Query fo the data ingestion section.](media/image07.png)
     
  7. In the Web UI, select **Open on Web UI**
    
-     ![writing Query in ADX in Web UI .](media/image08.png)
+    ![writing Query in ADX in Web UI .](media/image08.png)
     
 ## Pre-Exploration 
 ### Kusto Query Language (KQL) 
