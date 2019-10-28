@@ -262,7 +262,8 @@ Trips
 
  ``` 
   2. What was the fare amount for the trip with the max passenger count? 
- ```   
+  
+ ```  
 Trips 
 | where passenger_count > 4  
 | top 1 by passenger_count  
