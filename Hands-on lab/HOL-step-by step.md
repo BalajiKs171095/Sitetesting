@@ -245,10 +245,12 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 	  ![Image of selecting ADX database cluster](media/image31.png)
 	   
 3. In Databases, select TaxiRides and Select Query
-         ![writing Query fo the data ingestion section](media/image07.png)
+         
+	 ![writing Query fo the data ingestion section](media/image07.png)
 	 
 4. In the Web UI, select Open on Web UI  
-         ![writing Query in ADX in Web UI .](media/image08.png)
+        
+	![writing Query in ADX in Web UI .](media/image08.png)
 	
 ### Questions
 1. What was the fare amount of the last trip which pass the 90 percentiles? 
@@ -262,22 +264,22 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
  2. What was the fare amount for the trip with the max passenger count?
 ```
   Trips
-| where passenger_count > 4
-| top 1 by passenger_count
-| project fare_amount, vendor_id, passenger_count
+| where passenger_count > 4  
+| top 1 by passenger_count 
+| project fare_amount, vendor_id, passenger_count 
 
 ```
  
  3. How many trips this vendor has? 
-```
-Trips
-| summarize count() by vendor_id
-----
-Trips
-| where vendor_id == 2
-| count
+``` 
+Trips 
+| summarize count() by vendor_id 
+---- 
+Trips 
+| where vendor_id == 2 
+| count 
 
-```
+``` 
 
 ## Self-Study  
   
