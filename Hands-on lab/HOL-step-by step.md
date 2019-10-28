@@ -200,10 +200,10 @@ For this example, we will add a PowerBI output to your job and create a real-tim
 
 
  | **Settings**   | **Second Header**|
- | -------------  | ---------------- |
- | Output alias   | pbioutput        |
- | Dataset name   | nyctaxi          | 
- | Table name     | nyctaxi-table    | 
+ |----------------|------------------|
+ | Output alias   | pbioutput|
+ | Dataset name   | nyctaxi| 
+ | Table name     | nyctaxi-table| 
 
    ![Added PowerBI output to the Job](media/image13.png)
 	
