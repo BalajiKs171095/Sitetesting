@@ -25,35 +25,35 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
    - Connect with the **Azure Credentials** from **Environment Details** tab.
    
-        ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
+   ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
    - The portal opens with your credentials:  
       
-        ![portal will bw opened with the credentials provide.](media/image02.png "Azure Portal")
+   ![portal will bw opened with the credentials provide.](media/image02.png "Azure Portal")
       
  2. Select **All Services** from left hand pane, Search for **data explorer** and click the **star** icon.
  
-       ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
+   ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
   
  3. Drag **Azure Data Explorer Clusters** to the top of the **Favorite** menu.  
  
-       ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image04.png)
+    ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image04.png)
     
  4. Select **Azure Database Explorer** from **Favorite** menu and select the pre-deployed **SAADXWorkshop cluster**.
    
-       ![Image for selecting Azure Database Cluster.](media/image32.png)
+    ![Image for selecting Azure Database Cluster.](media/image32.png)
     
  5. Select **Databases** from the left-hand menu, under **Data** , and then select **+SAADXworkshop** . 
    
-       ![Create a new database in the cluster.](media/image31.png)  
+     ![Create a new database in the cluster.](media/image31.png)  
  
  6. In **Databases**, select your **SAADXWorkshop** and Select **Query**
  
-       ![writing Query fo the data ingestion section.](media/image07.png)
+     ![writing Query fo the data ingestion section.](media/image07.png)
     
  7. In the Web UI, select **Open on Web UI**
    
-       ![writing Query in ADX in Web UI .](media/image08.png)
+     ![writing Query in ADX in Web UI .](media/image08.png)
     
 ## Pre-Exploration 
 ### Kusto Query Language (KQL) 
@@ -144,7 +144,7 @@ Trips
 
 2. In the **Overview** section of the Stream Analytics job pane, click the **Input** box.
 
-      ![created Stream Analytics Job](media/image10.png)
+   ![created Stream Analytics Job](media/image10.png)
 
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
 
@@ -219,19 +219,19 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 
 2. In your workspace, click **+ Create**.
 
-      ![Creating powerbi sign-in](media/image14.png)
+   ![Creating powerbi sign-in](media/image14.png)
 	
 3. Create a new dashboard and name it **NYC Taxi**.
 
-      ![Creating powerbi dashboard](media/image15.png)
+   ![Creating powerbi dashboard](media/image15.png)
 	
 4. At the top of the window, click **Add tile**, select **CUSTOM STREAMING DATA**, and then click **Next**.
 
-      ![Adding data to Custom Stream Data](media/image16.png)
+    ![Adding data to Custom Stream Data](media/image16.png)
 	
 5. Under **YOUR DATSETS**, select your dataset and then click **Next**.	
 
-      ![Adding Datasets to PowerBI](media/image17.png)	
+    ![Adding Datasets to PowerBI](media/image17.png)	
 	  
 6. Under **Visualization Type**, select **Card**, and then in the **Fields** list, select **AvgPassenger**.
 
@@ -242,19 +242,19 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 ## Post-Exploration
 1. Select Azure Database Explorer from Favorite menu and select the pre-deployed nycXXX cluster
           
-	  ![Image of selecting ADX cluster](media/image33.png) 
+   ![Image of selecting ADX cluster](media/image33.png) 
 	  
 2. Select Databases from the left-hand menu, under Data , and then select TaxiRides
           
-	  ![Image of selecting ADX database cluster](media/image31.png)
+   ![Image of selecting ADX database cluster](media/image31.png)
 	   
 3. In Databases, select TaxiRides and Select Query
          
-	 ![writing Query fo the data ingestion section](media/image07.png)
+   ![writing Query fo the data ingestion section](media/image07.png)
 	 
 4. In the Web UI, select Open on Web UI  
         
-	![writing Query in ADX in Web UI .](media/image08.png)
+   ![writing Query in ADX in Web UI .](media/image08.png)
 	
 ### Questions
   1. What was the fare amount of the last trip which pass the 90 percentiles? 
@@ -299,15 +299,15 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
 ## Connect to Help cluster  
 1. Connect with the **Azure Credentials** from **Environment Details** tab.
 
-      ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
+   ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
 2. Open Power BI desktop, select **Get Data**, and **More…** Type **Data Explorer** in the search box.
 
-      ![Power BI desktop for you can do data analytics.](media/image19.png)  
+   ![Power BI desktop for you can do data analytics.](media/image19.png)  
 
 3. Select **Azure Data Explorer (Kusto)** and **Connect** 
 
-      ![You can select the database to be analysed.](media/image20.png)  
+   ![You can select the database to be analysed.](media/image20.png)  
 
 4. Enter the following properties (leave all other fields empty) and then select **OK**  
    Cluster: **Help**  
@@ -329,7 +329,7 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
  1. Create a line chart with the total number of events, by putting “Start Time” in the Axis box (not in Date Hierarchy mode) and     **EventId** in the Values box.  
  
-    ![Image which shows the environmrline chart of the database.](media/image24.png)  
+   ![Image which shows the environmrline chart of the database.](media/image24.png)  
  
  2. Add a Map tile by putting **“BeginLat”** in the Latitude box and putting **“BeginLon”** in the Longitude box.  
  
