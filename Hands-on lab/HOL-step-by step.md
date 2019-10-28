@@ -199,11 +199,11 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  2. Select + Add > Power BI. Then fill the form with the following details and select **Authorize**.
 
 
- | **Setting**   | **Second Header**|
- | ------------- | ---------------- |
- | Output alias  | pbioutput|
- | Dataset name  | nyctaxi| 
- | Table name    | nyctaxi-table| 
+ | **Settings**   | **Second Header**|
+ | -------------  | ---------------- |
+ | Output alias   | pbioutput        |
+ | Dataset name   | nyctaxi          | 
+ | Table name     | nyctaxi-table    | 
 
    ![Added PowerBI output to the Job](media/image13.png)
 	
