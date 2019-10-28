@@ -201,9 +201,13 @@ For this example, we will add a PowerBI output to your job and create a real-tim
 
  | **Settings**  | **Second Header**|
  |---------------|------------------|
- |Output alias   |pbioutput|
- |Dataset name   |nyctaxi| 
+ | Output alias   |pbioutput|
+ | Dataset name   |nyctaxi| 
  |Table name     |nyctaxi-table| 
+ 
+  | Value                     | Description                                                                                                                                                                                                                            |
+   | ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | **Azure subscription ID** | The Azure subscription ID to use for AKS. You can list all of your subscriptions and their IDs by running `az account list` from another command line.                                                                                 |
 
    ![Added PowerBI output to the Job](media/image13.png)
 	
