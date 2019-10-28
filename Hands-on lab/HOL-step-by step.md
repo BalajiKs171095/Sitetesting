@@ -272,12 +272,12 @@ Trips
  
   3. How many trips this vendor has?  
  ``` 
-Trips 
-| summarize count() by vendor_id 
-
-Trips 
-| where vendor_id == 2 
-| count 
+Trips
+| summarize count() by vendor_id
+----
+Trips
+| where vendor_id == 2
+| count
 
  ``` 
 
@@ -285,7 +285,7 @@ Trips
   
 ### Kusto Query Language (KQL)  
 
-Free online Course – Basics of KQL - Http://aka.ms/KQLPluralsight
+Free online Course – Basics of KQL - <Http://aka.ms/KQLPluralsight>
 
 ## Power BI  
 Power BI is used to visualize the data. Note that Power BI is a visualization tool with data size limitations. Default: 500,000 records and 700MB data size. 
