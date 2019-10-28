@@ -274,7 +274,8 @@ Trips
  ``` 
 Trips
 | summarize count() by vendor_id
- ```
+
+```
 ----
  ```
 Trips
