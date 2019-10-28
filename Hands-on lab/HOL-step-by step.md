@@ -90,7 +90,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 -  | **parse** Col1 with <pattern>…
 	Deals with unstructured data  
 	
- ### 9. Questions 
+ ### Questions 
  
    1.How many rows Trips table contain?
  ```  
@@ -351,7 +351,7 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
     ![Image which shows the complete analysis of the database.](media/image29.png)  
  
- ### 3 Power BI Connectors  
+ ### Power BI Connectors  
  1. Native Connector for Power BI
     - Native Connector **->** data explorer **->** Connect **->** Preview Feature (accept) continue.
     - Cluster: demo12.westus
