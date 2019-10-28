@@ -201,9 +201,9 @@ For this example, we will add a PowerBI output to your job and create a real-tim
 
  | **Settings**       | **Second Header**|
  |--------------------|------------------|
- | Output alias       | pbioutput|
- | Dataset name       | nyctaxi| 
- |Table name          | nyctaxi-table| 
+ | Output alias       | pbioutput        |
+ | Dataset name       | nyctaxi          | 
+ | Table name         | nyctaxi-table    | 
  
    ![Added PowerBI output to the Job](media/image13.png)
 	
@@ -267,14 +267,14 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 | project fare_amount, vendor_id, passenger_count
 ```
   3. How many trips this vendor has? 
-  ```
-  Trips
+```
+Trips
 | summarize count() by vendor_id
 ----
 Trips
 | where vendor_id == 2
 | count
-  ```
+```
 ## Self-Study  
   
 ### Kusto Query Language (KQL)  
