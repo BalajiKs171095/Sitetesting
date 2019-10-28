@@ -265,16 +265,19 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 | where passenger_count > 4
 | top 1 by passenger_count
 | project fare_amount, vendor_id, passenger_count
-```
+
+ ```
   3. How many trips this vendor has? 
-```
+ ```
 Trips
 | summarize count() by vendor_id
 ----
 Trips
 | where vendor_id == 2
 | count
-```
+
+ ```
+
 ## Self-Study  
   
 ### Kusto Query Language (KQL)  
