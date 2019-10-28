@@ -315,37 +315,37 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
 5. Expand the Samples database and select StormEvents. If the table looks ok, select **Load**. To make changes, select **Edit**. 
  
-    ![Image which resemble the sample database.](media/image22.png)  
+   ![Image which resemble the sample database.](media/image22.png)  
  
 6. The new StormEvents table was added to the Power BI report.  
  
-    ![Image which shows the newly events added to the Power BI.](media/image23.png)  
+   ![Image which shows the newly events added to the Power BI.](media/image23.png)  
  
  ### Create a Power BI report  
  
  1. Create a line chart with the total number of events, by putting “Start Time” in the Axis box (not in Date Hierarchy mode) and     **EventId** in the Values box.  
  
-       ![Image which shows the environmrline chart of the database.](media/image24.png)  
+   ![Image which shows the environmrline chart of the database.](media/image24.png)  
  
  2. Add a Map tile by putting **“BeginLat”** in the Latitude box and putting **“BeginLon”** in the Longitude box.  
  
-       ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longitue Box.](media/image25.png)  
+   ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longitue Box.](media/image25.png)  
  
  3. Create a Clustered column chart by putting **“Event Type”** in the Axis box and (count) **“Event Id”** in the value box.  
  
-       ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
+   ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
  
  4. Create 4 separate card tiles with **“DeathDirect”**, **“DeathIndirect”**, **“InjuriesDirect”** and **“InjuriesIndirect** in the Fields box.  
  
-       ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
+   ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
  
  5. Create a pie chart of reporting sources by putting the **“Source”** in the legend box and putting the (count) **“EventId”** in the values box.  
  
- ![Image which shows the pie chart with legend box value box.](media/image28.png)  
+   ![Image which shows the pie chart with legend box value box.](media/image28.png)  
  
  6. Now arrange the tiles on the canvas and you’re ready to slice and dice.  
  
- ![Image which shows the complete analysis of the database.](media/image29.png)  
+   ![Image which shows the complete analysis of the database.](media/image29.png)  
  
  ### 3 Power BI Connectors  
  1. Native Connector for Power BI
