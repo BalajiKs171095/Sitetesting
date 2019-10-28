@@ -274,7 +274,9 @@ Trips
  ``` 
 Trips
 | summarize count() by vendor_id
+ ```
 ----
+ ```
 Trips
 | where vendor_id == 2
 | count
