@@ -285,7 +285,7 @@ Trips
   
 ### Kusto Query Language (KQL)  
 
-Free online Course – Basics of KQL - <Http://aka.ms/KQLPluralsight>
+Free online Course – Basics of KQL - <http://aka.ms/KQLPluralsight>
 
 ## Power BI  
 Power BI is used to visualize the data. Note that Power BI is a visualization tool with data size limitations. Default: 500,000 records and 700MB data size. 
