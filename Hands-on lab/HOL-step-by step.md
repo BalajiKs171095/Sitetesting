@@ -169,7 +169,7 @@ Trips
  
  Select “*Query*” under Job Topology and paste the following in the query text box.
  
- ```
+```
  SELECT all relevant fields from TaxiRide Streaming input
  WITH 
 TripData AS (
@@ -185,7 +185,7 @@ SELECT avg(passengerCount) as AvgPassenger, avg(TripTimeinSeconds) as TripTimein
 INTO pbioutput
 FROM TripData Group By VendorId,tumblingwindow(minute,1)
 
- ```
+```
  
  Once you have saved this query, you can test it against sample input data. You can obtain sample input data by selecting ‘Reset’. This looks for input data from event hub and shows it in the bottom pane.
  
