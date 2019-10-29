@@ -6,8 +6,6 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
 **Contents**
  
- <!-- TOC -->
-
 - Infrastructure
 - Pre-Exploration
 - Stream Analytics
@@ -17,8 +15,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
   - Power BI    
      - Connect to Help cluster 
      - Create Power BI report 
-         
-  <!-- TOC -->   
+           
 ## Infrastructure  
 
 1. Open Azure portal in private mode: https://portal.azure.com in the Virtual Machine (on the left-hand side)
