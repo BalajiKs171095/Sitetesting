@@ -148,14 +148,13 @@ Trips
 
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
 
-
-   | Settings              |  Suggested Value         | Description       |                                                         
-   |-----------------------|--------------------------|---------------------------------------------| 
-   | Input alias           | TaxiRide                 | Enter a name to identify the job’s input.|   
-   | Subscription          | Your subscription        | Select the Azure subscription where you deployed Event Hub |
-   | Event Hub namespace   | predefined EH namespace  | Enter the name of the Event Hub namespace.|
-   | Event Hub name        | predefined EH for ASA    | Select the name of your Event Hub.|
-   | Event Hub policy name | predefined policy        | Select the access policy that you created earlier.|	
+   | Settings                 |  Suggested Value           | Description       |                                                         
+   |--------------------------|----------------------------|---------------------------------------------| 
+   | Input alias              | TaxiRide                   | Enter a name to identify the job’s input.|   
+   | Subscription             | Your subscription          | Select the Azure subscription where you deployed Event Hub |
+   | Event Hub namespace      | predefined EH namespace    | Enter the name of the Event Hub namespace.|
+   | Event Hub name           | predefined EH for ASA      | Select the name of your Event Hub.|
+   | Event Hub policy name    | predefined policy          | Select the access policy that you created earlier.|	
  
    ![created Stream Analytics Job with values](media/image11.png)
  
