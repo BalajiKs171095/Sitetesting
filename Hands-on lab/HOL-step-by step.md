@@ -242,7 +242,7 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 ## Post-Exploration
 1. Select Azure Database Explorer from Favorite menu and select the pre-deployed nycXXX cluster
     
-    ![Image of selecting ADX cluster](media/image33.png) 
+    ![Image of selecting ADX cluster](media/image34.png) 
 	  
 2. Select Databases from the left-hand menu, under Data , and then select TaxiRides
           
