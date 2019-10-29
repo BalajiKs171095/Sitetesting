@@ -103,21 +103,21 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 	
  ### Questions 
  
- 1. How many rows Trips table contain?
+1. How many rows Trips table contain?
  
 // The trace table contains 1547471776 records
  ``` 
 Trips
 | count
  ``` 
- 2. Take a 10 row sample of Trips
+2. Take a 10 row sample of Trips
  
 // Sample Trips lines 
  ```  
  Trips
 | take 10
 ``` 
- 3. Query trips distribution for 60 days by pickup datetime, start on 2017-12-01.
+3. Query trips distribution for 60 days by pickup datetime, start on 2017-12-01.
 
 // Trips distribution for 60 days, by Pickup time
  ``` 
@@ -126,14 +126,14 @@ Trips
 | summarize count() by bin(pickup_datetime, 1d)
 | render timechart
  ```
- 4. Query the min and max pickup datetime 
+4. Query the min and max pickup datetime 
   
  // The newest and the oldest trip by pickup datetime 
  ```
 Trips
 | summarize min(pickup_datetime), max(pickup_datetime)
  ```
-5. Query passenger 50, 90 and 99 percentiles 
+ 5. Query passenger 50, 90 and 99 percentiles 
 
  // The passenger count per percentiles  
  ```
