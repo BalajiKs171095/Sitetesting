@@ -41,11 +41,11 @@ Walk away with a solution for your frustrated customers, so they can make immedi
    
    ![Image for selecting Azure Database Cluster.](media/image33.png)
     
-5. Select **Databases** from the left-hand menu, under **Data** , and then select **+SAADXworkshop** . 
+5. Select **Databases** from the left-hand menu, under **Data** , and then select **TaxiRides** . 
    
    ![Create a new database in the cluster.](media/image31.png)  
  
-6. In **Databases**, select your **SAADXWorkshop** and Select **Query**
+6. In **Databases**, select your **TaxiRides** and Select **Query**
  
    ![writing Query fo the data ingestion section.](media/image07.png)
     
@@ -102,34 +102,39 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  ### Questions 
  
    1.How many rows Trips table contain?
- ```  
-// The trace table contains 175698341 records    
+ 
+// The trace table contains 175698341 records
+ ``` 
 Trips
 | count
  ``` 
    2.Take a 10 row sample of Trips
- ```  
+ 
 // Sample Trips lines 
+ ``` 
 Trips
 | take 10
 ``` 
   3.Query trips distribution for 60 days by pickup datetime, start on 2017-12-01.
- ```
+
 // Trips distribution for 60 days, by Pickup time
+ ``` 
 Trips
 | where pickup_datetime between (datetime(2017-12-01) .. 60d)
 | summarize count() by bin(pickup_datetime, 1d)
 | render timechart
  ```
  4.Query the min and max pickup datetime 
-  ```
+  
  // The newest and the oldest trip by pickup datetime 
+ ```
 Trips
 | summarize min(pickup_datetime), max(pickup_datetime)
  ```
  5.Query passenger 50, 90 and 99 percentiles 
-  ```
+
  // The passenger count per percentiles  
+ ```
 Trips
 | summarize percentiles(passenger_count, 50, 90, 99)
   ```
