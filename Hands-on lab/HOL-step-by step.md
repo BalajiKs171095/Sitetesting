@@ -65,31 +65,40 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 	   Get few records to become familiar with the data. No order ensured.  
 
 -  | **where** Timestamp > ago(1) and UserId = ‘abdcdef’	
- 	Filters on specific fields  
+ 	
+	   Filters on specific fields  
   
 -  | **project** Col1, Col2, …	
- 	Select some columns (use if input table has many columns)  
+ 	
+	   Select some columns (use if input table has many columns)  
   
 -  | **extend** NewCol1=Col1+Col2		
-	Introduces new calculated columns  
+	
+	   Introduces new calculated columns  
  
 -  | **render** timechart		
-	Plots the data (in KE and KWE) while exploring  
+	
+	   Plots the data (in KE and KWE) while exploring  
  
 -  | **summarize** count(), dcount(Id) by Col1, Col2		
-	Analytics: aggregations  
+	
+	   Analytics: aggregations  
  
 -  | **top** 10 by count_ desc 
-	Finds the needle in the haystack  
+	
+	   Finds the needle in the haystack  
  
 -  | **join** (…) on Key1, Key2 
-	Joins data sets 
+	
+	   Joins data sets 
  
 -  | **mvexpand** Col1,Col2 … 
-	Turns dynamic arrays to rows (multi-value expansion)  
+	
+	   Turns dynamic arrays to rows (multi-value expansion)  
  
 -  | **parse** Col1 with <pattern>…
-	Deals with unstructured data  
+	
+	   Deals with unstructured data  
 	
  ### Questions 
  
