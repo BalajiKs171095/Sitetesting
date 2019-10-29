@@ -271,7 +271,7 @@ Navigate to the **Overview** page of **Stream Analytics job** and select **Start
     ![writing Query in ADX in Web UI .](media/image08.png)
 	
 ### Questions
-  1. What was the fare amount of the last trip which pass the 90 percentiles? 
+  1. What was the trip distance of the last trip which pass the 90 percentiles? 
  ```  
 Trips
 | where passenger_count > 4
