@@ -160,7 +160,7 @@ Trips
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
 
    
-   | **Settings**                   | **Suggested Value**          | **Description**|                                                   
+   | **Settings**                   | **Suggested Value**          | **Description**                             |                                            
    |------------------------------- |------------------------------|---------------------------------------------| 
    | **Input alias**                | **TaxiRide**                 | Enter a name to identify the job’s input.|   
    | **Subscription**               | **Your subscription**        | Select the Azure subscription that has the Event Hub you have created| 
