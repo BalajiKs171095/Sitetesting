@@ -56,9 +56,9 @@ Walk away with a solution for your frustrated customers, so they can make immedi
     
 ## Pre-Exploration 
 ### Kusto Query Language (KQL) 
-    | **count**	
+    | count
 
-     > Counts records in input table (e.g. T)  
+   > Counts records in input table (e.g. T)  
   
 -  | **take** 10	
        > Get few records to become familiar with the data. No order ensured.  
