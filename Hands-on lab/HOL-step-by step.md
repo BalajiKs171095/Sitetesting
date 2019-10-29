@@ -151,7 +151,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
    ![New Stream Analytics Job details view](media/image09.png)
 
-3.&nbsp;Click **Create**.
+   3.&nbsp;Click **Create**.
 
 ### Configure job input
 1. In the dashboard or the **All resources** pane, find and select the **asa_nyctaxi** Stream Analytics job.
@@ -173,7 +173,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
    ![created Stream Analytics Job with values](media/image11.png)
  
-4.&nbsp;Click **Save**.
+ 4.&nbsp;Click **Save**.
  
  ### Create queries to transform real-time data
  
@@ -221,9 +221,9 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  
    ![Added PowerBI output to the Job](media/image13.png)
 	
-3.&nbsp;When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
+  3.&nbsp;When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
 
-4.&nbsp;Click **Create**.
+  4.&nbsp;Click **Create**.
 	
 ### Run the job
 Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process input events flowing in from your event hub. In our case, it is continuously calculating the average passenger count and writing it to a streaming dataset in Power BI.
