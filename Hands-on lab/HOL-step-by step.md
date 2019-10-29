@@ -214,7 +214,6 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  1. On the left menu, select Outputs under Job topology. Then, select + Add and choose Power BI from the dropdown menu.
  2. Select + Add > Power BI. Then fill the form with the following details and select **Authorize**.
 
-
     | **Setting**         | **Suggested Value**|
     |---------------------|-------------------|
     | Output alias        | pbioutput         |
