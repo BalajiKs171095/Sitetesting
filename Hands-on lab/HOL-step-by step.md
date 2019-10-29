@@ -218,7 +218,7 @@ For this example, we will add a PowerBI output to your job and create a real-tim
    | **Setting**         | **Suggested Value**|
    |---------------------|-------------------|
    | Output alias        | pbioutput         |
-   | Dataset name        | nyctaxi           | 
+   | Dataset name&nbsp;&nbsp;&nbsp;        | nyctaxi           | 
    | Table name          | nyctaxi-table     | 
  
    ![Added PowerBI output to the Job](media/image13.png)
