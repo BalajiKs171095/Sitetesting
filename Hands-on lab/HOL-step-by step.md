@@ -31,7 +31,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
       
    ![portal will bw opened with the credentials provide.](media/image02.png "Azure Portal")
       
-2. Select **All Services** from left hand pane, Search for **data explorer** and click the **star** icon.
+2. Select **All Services** from left hand pane, search for **data explorer** and click the **star** icon.
  
    ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
   
