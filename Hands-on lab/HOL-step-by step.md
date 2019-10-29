@@ -127,7 +127,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  4. (Optional) Query trips distribution for 60 days by pickup datetime, start on 2020-01-01.
 
       // Trips distribution for 60 days, by Pickup time
-      ``` 
+&nbsp;      ``` 
      Trips
      | where pickup_datetime < datetime(2020-01-01)
      | summarize min(pickup_datetime), max(pickup_datetime)
@@ -151,7 +151,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
    ![New Stream Analytics Job details view](media/image09.png)
 
-3.&nbsp;&nbsp;Click **Create**.
+3.&nbsp;&nbsp;&nbsp;Click **Create**.
 
 ### Configure job input
 1. In the dashboard or the **All resources** pane, find and select the **asa_nyctaxi** Stream Analytics job.
