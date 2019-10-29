@@ -221,9 +221,9 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  
    ![Added PowerBI output to the Job](media/image13.png)
 	
-3. When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
+3.&nbsp;When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
 
-4. Click **Create**.
+4.&nbsp;Click **Create**.
 	
 ### Run the job
 Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process input events flowing in from your event hub. In our case, it is continuously calculating the average passenger count and writing it to a streaming dataset in Power BI.
