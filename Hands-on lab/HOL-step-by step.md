@@ -116,6 +116,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
       ```  
       Trips
       | take 10
+      ```  
   3. Query passenger 50, 90 and 99 percentiles 
  
       // The passenger count per percentiles 
@@ -138,7 +139,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
       ```
       Trips
       | summarize min(pickup_datetime), max(pickup_datetime)
-     
+     ``` 
 ## Stream Analytics
 
 ### &nbsp;&nbsp;&nbsp;Create the Job
