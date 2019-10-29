@@ -149,21 +149,21 @@ Trips
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
 
 
- | **Settings**                   | **Suggested Value**          | **Description**|                                                         
- |------------------------------- |------------------------------|---------------------------------------------| 
- | **Input alias**                | **TaxiRide**                 | Enter a name to identify the job’s input.|   
- | **Subscription**               | **Your subscription**        | Select the Azure subscription that has the Event Hub you have created| 
- | **Event Hub namespace**        | **predefined EH namespace**  | Enter the name of the Event Hub namespace.|
- | **Event Hub name**             | **predefined EH for ASA**    | Select the name of your Event Hub.|
- | **Event Hub policy name**      | **predefined policy**        | Select the access policy that you created earlier.|	
+   | **Settings**                   | **Suggested Value**          | **Description**|                                                         
+   |------------------------------- |------------------------------|---------------------------------------------| 
+   | **Input alias**                | **TaxiRide**                 | Enter a name to identify the job’s input.|   
+   | **Subscription**               | **Your subscription**        | Select the Azure subscription that has the Event Hub you have created| 
+   | **Event Hub namespace**        | **predefined EH namespace**  | Enter the name of the Event Hub namespace.|
+   | **Event Hub name**             | **predefined EH for ASA**    | Select the name of your Event Hub.|
+   | **Event Hub policy name**      | **predefined policy**        | Select the access policy that you created earlier.|	
  
-   ![created Stream Analytics Job with values](media/image11.png)
+    ![created Stream Analytics Job with values](media/image11.png)
  
  4. Click **Save**.
  
  ### Create queries to transform real-time data
  
- At this point, you have a Stream Analytics job set up to read an incoming data stream. The next step is to create a query that analyzes the data in real time. Stream Analytics supports a simple, declarative query model that describes transformations for real-time processing. The queries use a SQL-like language that has some extensions specific to Stream Analytics.
+At this point, you have a Stream Analytics job set up to read an incoming data stream. The next step is to create a query that analyzes the data in real time. Stream Analytics supports a simple, declarative query model that describes transformations for real-time processing. The queries use a SQL-like language that has some extensions specific to Stream Analytics.
  
  You will use the query below as part of this exercise. This query calculates the average passenger count and average trip duration. In a later section, you'll configure an output sink and a query that writes the transformed data to that sink.
  
@@ -199,13 +199,13 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  2. Select + Add > Power BI. Then fill the form with the following details and select **Authorize**.
 
 
- | **Setting**         | **Suggested Value**|
- |---------------------|-------------------|
- | Output alias        | pbioutput         |
- | Dataset name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|nyctaxi| 
- | Table name          | nyctaxi-table     | 
+    | **Setting**         | **Suggested Value**|
+    |---------------------|-------------------|
+    | Output alias        | pbioutput         |
+    | Dataset name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|nyctaxi| 
+    | Table name          | nyctaxi-table     | 
  
-   ![Added PowerBI output to the Job](media/image13.png)
+    ![Added PowerBI output to the Job](media/image13.png)
 	
 3. When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
 
