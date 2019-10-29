@@ -47,7 +47,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
    
    ![Create a new database in the cluster.](media/image31.png)  
  
-6. In **Databases**, select **TaxiRides** and Select **Query**
+6. In **Databases**, select **TaxiRides** and then select **Query**
  
    ![Image of the precreated cluster.](media/image07.png)
     
