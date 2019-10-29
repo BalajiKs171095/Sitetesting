@@ -133,7 +133,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
      | where pickup_datetime < datetime(2020-01-01)
      | summarize min(pickup_datetime), max(pickup_datetime)
       ```
-5. (Optional)Query the min and max pickup datetime 
+ 5. (Optional)Query the min and max pickup datetime 
   
       // The newest and the oldest trip by pickup datetime 
       ```
