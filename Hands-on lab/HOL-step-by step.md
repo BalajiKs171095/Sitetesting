@@ -39,7 +39,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
    ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image04.png)
     
-4. Select **Azure Database Explorer** from **Favorite** menu and select the pre-deployed **sharedadx cluster**.
+4. Select **Azure Database Explorer** from **Favorite** menu and then select the pre-deployed **sharedadx cluster**.
    
    ![Image for selecting Azure Database Cluster.](media/image33.png)
     
