@@ -20,7 +20,8 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 ## Infrastructure ##
 
 1. Open the desktop shortcut which navigates you to the **Azure Portal** 
-     ![+ Image of desktop icon.](media/image00.png "Azure Portal")
+
+   ![+ Image of desktop icon.](media/image00.png "Azure Portal")
 
    - Connect with the **Azure Credentials** from **Environment Details** tab.
    
