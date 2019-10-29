@@ -93,21 +93,21 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 	
  ### Questions 
  
-   1.How many rows Trips table contain?
+1.How many rows Trips table contain?
   
 // The trace table contains 175698341 records  
  ``` 
 Trips
 | count
  ``` 
-   2.Take a 10 row sample of Trips
+2.Take a 10 row sample of Trips
   
 // Sample Trips lines 
  ``` 
 Trips
 | take 10
 ``` 
-   3.Query passenger 50, 90 and 99 percentiles .
+3.Query passenger 50, 90 and 99 percentiles .
  
 // Trips distribution for 60 days, by Pickup time
 
@@ -127,7 +127,7 @@ Trips
 | render timechart
 
  ```
- 5.(Optional) Query the min and max pickup datetime  
+5.(Optional) Query the min and max pickup datetime  
  
 // The newest and the oldest trip by pickup datetime 
   ```
