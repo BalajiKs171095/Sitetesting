@@ -19,7 +19,9 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
 ## Infrastructure ##
 
-1. Open Azure portal in private mode: https://portal.azure.com in the Virtual Machine (on the left-hand side)
+1. Open the desktop shortcut which navigates you to the **Azure Portal** 
+
+   ![+ Image of desktop icon.](media/image00.png "Azure Portal")
 
    - Connect with the **Azure Credentials** from **Environment Details** tab.
    
@@ -56,24 +58,32 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 ## Pre-Exploration 
 ### Kusto Query Language (KQL) 
 -  | **count**
-   >Counts records in input table (e.g. T)  
+
+     >Counts records in input table (e.g. T)  
   
 -  | **take** 10	
-   >Get few records to become familiar with the data. No order ensured.  
+              
+     >Get few records to become familiar with the data. No order ensured.  
 
 -  | **where** Timestamp > ago(1) and UserId = ‘abdcdef’	
-   >Filters on specific fields  
+ 	
+     >Filters on specific fields  
   
 -  | **project** Col1, Col2, …	
-   >Select some columns (use if input table has many columns)  
+ 	
+     >Select some columns (use if input table has many columns)  
   
--  | **extend** NewCol1=Col1+Col2	
-   >Introduces new calculated columns  
+-  | **extend** NewCol1=Col1+Col2		
+	  
+     >Introduces new calculated columns  
  
 -  | **render** timechart		
-   >Plots the data (in KE and KWE) while exploring  
+	
+     >Plots the data (in KE and KWE) while exploring  
  
--  | **summarize** count(), dcount(Id) by Col1, Col2		>Analytics: aggregations  
+-  | **summarize** count(), dcount(Id) by Col1, Col2		
+	 
+      >Analytics: aggregations  
  
 -  | **top** 10 by count_ desc 
 	
@@ -93,47 +103,42 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 	
  ### Questions 
  
-1.How many rows Trips table contain?
-  
-// The trace table contains 175698341 records  
+   1.How many rows Trips table contain?
+ 
+// The trace table contains 175698341 records
  ``` 
 Trips
 | count
  ``` 
-2.Take a 10 row sample of Trips
-  
+   2.Take a 10 row sample of Trips
+ 
 // Sample Trips lines 
  ``` 
 Trips
 | take 10
 ``` 
-3.Query passenger 50, 90 and 99 percentiles .
- 
+  3.Query trips distribution for 60 days by pickup datetime, start on 2017-12-01.
+
 // Trips distribution for 60 days, by Pickup time
-
- ```
+ ``` 
 Trips
 | where pickup_datetime between (datetime(2017-12-01) .. 60d)
 | summarize count() by bin(pickup_datetime, 1d)
 | render timechart
  ```
- 4.(Optional) Query trips distribution for 60 days by pickup datetime, start on 2017-12-01.
- 
- // Trips distribution for 60 days, by Pickup time
-  ```
-Trips
-| where pickup_datetime between (datetime(2017-12-01) .. 60d)
-| summarize count() by bin(pickup_datetime, 1d)
-| render timechart
-
+ 4.Query the min and max pickup datetime 
+  
+ // The newest and the oldest trip by pickup datetime 
  ```
-5.(Optional) Query the min and max pickup datetime  
- 
-// The newest and the oldest trip by pickup datetime 
-  ```
 Trips
 | summarize min(pickup_datetime), max(pickup_datetime)
+ ```
+ 5.Query passenger 50, 90 and 99 percentiles 
 
+ // The passenger count per percentiles  
+ ```
+Trips
+| summarize percentiles(passenger_count, 50, 90, 99)
   ```
 
 ## Stream Analytics
@@ -153,20 +158,19 @@ Trips
 ### Configure job input
 1. In the dashboard or the **All resources** pane, find and select the **asa_nyctaxi** Stream Analytics job.
 
-2. In the **Overview** section of the Stream Analytics job pane, click the **Input** box.
+2. In the **Overview** section of the Stream Analytics job pane, click the **Inputs** box.
 
    ![created Stream Analytics Job](media/image10.png)
 
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
-
    
-   | **Settings**                   | **Suggested Value**          | **Description**                             |                                            
+   | **Settings**                   | **Suggested Value**          | **Description**|                                                         
    |------------------------------- |------------------------------|---------------------------------------------| 
-   | **Input alias**                | **TaxiRide**                 | Enter a name to identify the job’s input.|   
-   | **Subscription**               | **Your subscription**        | Select the Azure subscription that has the Event Hub you have created| 
-   | **Event Hub namespace**        | **predefined EH namespace**  | Enter the name of the Event Hub namespace.|
-   | **Event Hub name**             | **predefined EH for ASA**    | Select the name of your Event Hub.|
-   | **Event Hub policy name**      | **predefined policy**        | Select the access policy that you created earlier.|
+   | **Input alias**                | **TaxiRide** &nbsp;&nbsp;&nbsp;| Enter a name to identify the job’s input.|   
+   | **Subscription**               | **Your subscription**&nbsp;&nbsp;&nbsp;| Select the Azure subscription that has the Event Hub you have created| 
+   | **Event Hub namespace**        | **predefined EH namespace**&nbsp;&nbsp;&nbsp;| Enter the name of the Event Hub namespace.|
+   | **Event Hub name**             | **predefined EH for ASA**&nbsp;&nbsp;&nbsp;| Select the name of your Event Hub.|
+   | **Event Hub policy name**      | **predefined policy**&nbsp;&nbsp;&nbsp;| Select the access policy that you created earlier.|
  
    ![created Stream Analytics Job with values](media/image11.png)
  
