@@ -138,7 +138,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
       ```
       Trips
       | summarize min(pickup_datetime), max(pickup_datetime)
-       ```
+       
 
 ## Stream Analytics
 
