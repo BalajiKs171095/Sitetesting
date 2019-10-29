@@ -214,13 +214,13 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  1. On the left menu, select Outputs under Job topology. Then, select + Add and choose Power BI from the dropdown menu.
  2. Select + Add > Power BI. Then fill the form with the following details and select **Authorize**.
 
-    | **Setting**         | **Suggested Value**|
-    |---------------------|-------------------|
-    | Output alias        | pbioutput         |
-    | Dataset name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|nyctaxi| 
-    | Table name          | nyctaxi-table     | 
+   | **Setting**         | **Suggested Value**|
+   |---------------------|-------------------|
+   | Output alias        | pbioutput         |
+   | Dataset name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|nyctaxi| 
+   | Table name          | nyctaxi-table     | 
  
-    ![Added PowerBI output to the Job](media/image13.png)
+   ![Added PowerBI output to the Job](media/image13.png)
 	
 3. When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
 
