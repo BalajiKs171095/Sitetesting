@@ -19,9 +19,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
 ## Infrastructure ##
 
-1. Open the desktop shortcut which navigates you to the **Azure Portal** 
-
-   ![+ Image of desktop icon.](media/image00.png "Azure Portal")
+1. Open Azure portal in private mode: https://portal.azure.com in the Virtual Machine (on the left-hand side)
 
    - Connect with the **Azure Credentials** from **Environment Details** tab.
    
@@ -39,15 +37,15 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
    ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image04.png)
     
-4. Select **Azure Database Explorer** from **Favorite** menu and select the pre-deployed **sharedadx cluster**.
+4. Select **Azure Database Explorer** from **Favorite** menu and select the pre-deployed **SAADXWorkshop cluster**.
    
    ![Image for selecting Azure Database Cluster.](media/image33.png)
     
-5. Select **Databases** from the left-hand menu, under **Data** , and then select **TaxiRides** . 
+5. Select **Databases** from the left-hand menu, under **Data** , and then select **+SAADXworkshop** . 
    
    ![Create a new database in the cluster.](media/image31.png)  
  
-6. In **Databases**, select your **TaxiRides** and Select **Query**
+6. In **Databases**, select your **SAADXWorkshop** and Select **Query**
  
    ![writing Query fo the data ingestion section.](media/image07.png)
     
@@ -58,32 +56,24 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 ## Pre-Exploration 
 ### Kusto Query Language (KQL) 
 -  | **count**
-
-     >Counts records in input table (e.g. T)  
+   >Counts records in input table (e.g. T)  
   
 -  | **take** 10	
-              
-     >Get few records to become familiar with the data. No order ensured.  
+   >Get few records to become familiar with the data. No order ensured.  
 
 -  | **where** Timestamp > ago(1) and UserId = ‘abdcdef’	
- 	
-     >Filters on specific fields  
+   >Filters on specific fields  
   
 -  | **project** Col1, Col2, …	
- 	
-     >Select some columns (use if input table has many columns)  
+   >Select some columns (use if input table has many columns)  
   
--  | **extend** NewCol1=Col1+Col2		
-	  
-     >Introduces new calculated columns  
+-  | **extend** NewCol1=Col1+Col2	
+   >Introduces new calculated columns  
  
 -  | **render** timechart		
-	
-     >Plots the data (in KE and KWE) while exploring  
+   >Plots the data (in KE and KWE) while exploring  
  
--  | **summarize** count(), dcount(Id) by Col1, Col2		
-	 
-      >Analytics: aggregations  
+-  | **summarize** count(), dcount(Id) by Col1, Col2		>Analytics: aggregations  
  
 -  | **top** 10 by count_ desc 
 	
@@ -104,41 +94,43 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  ### Questions 
  
    1.How many rows Trips table contain?
- 
-![// The trace table contains 175698341 records](https://placehold.it/15/c5f015/000000?text=+)
- ``` 
+ ```  
+// The trace table contains 175698341 records    
 Trips
 | count
  ``` 
    2.Take a 10 row sample of Trips
- 
+ ```  
 // Sample Trips lines 
- ``` 
 Trips
 | take 10
 ``` 
-  3.Query trips distribution for 60 days by pickup datetime, start on 2017-12-01.
-
+   3.Query passenger 50, 90 and 99 percentiles .
+ 
 // Trips distribution for 60 days, by Pickup time
- ``` 
+
+ ```
 Trips
 | where pickup_datetime between (datetime(2017-12-01) .. 60d)
 | summarize count() by bin(pickup_datetime, 1d)
 | render timechart
  ```
- 4.Query the min and max pickup datetime 
-  
- // The newest and the oldest trip by pickup datetime 
+ 4.(Optional) Query trips distribution for 60 days by pickup datetime, start on 2017-12-01.
+ // Trips distribution for 60 days, by Pickup time
+  ```
+Trips
+| where pickup_datetime between (datetime(2017-12-01) .. 60d)
+| summarize count() by bin(pickup_datetime, 1d)
+| render timechart
+
  ```
+ 5.(Optional) Query the min and max pickup datetime  
+ 
+// The newest and the oldest trip by pickup datetime 
+  ```
 Trips
 | summarize min(pickup_datetime), max(pickup_datetime)
- ```
- 5.Query passenger 50, 90 and 99 percentiles 
 
- // The passenger count per percentiles  
- ```
-Trips
-| summarize percentiles(passenger_count, 50, 90, 99)
   ```
 
 ## Stream Analytics
