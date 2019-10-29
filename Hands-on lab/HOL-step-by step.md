@@ -151,7 +151,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
    ![New Stream Analytics Job details view](media/image09.png)
 
-3.Click **Create**.
+3.&nbsp;&nbsp;Click **Create**.
 
 ### Configure job input
 1. In the dashboard or the **All resources** pane, find and select the **asa_nyctaxi** Stream Analytics job.
@@ -173,7 +173,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
    ![created Stream Analytics Job with values](media/image11.png)
  
-4. Click **Save**.
+4.&nbsp;&nbsp;&nbsp;Click **Save**.
  
  ### Create queries to transform real-time data
  
