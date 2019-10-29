@@ -165,7 +165,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
    
   
-   | **Settings**                   | **Suggested Value**          | **Description**|                                                         
+   | **Settings**                   | **Suggested Value**          | **Description**|                                                        
    |------------------------------- |------------------------------|---------------------------------------------| 
    | **Input alias**                | **TaxiRide**                 | Enter a name to identify the job’s input.|   
    | **Subscription**               | **Your subscription**        | Select the Azure subscription that has the Event Hub you have created| 
@@ -218,7 +218,7 @@ For this example, we will add a PowerBI output to your job and create a real-tim
    | **Setting**         | **Suggested Value**|
    |---------------------|-------------------|
    | Output alias        | pbioutput         |
-   | Dataset name&nbsp;&nbsp;&nbsp;        | nyctaxi           | 
+   | Dataset name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| nyctaxi           | 
    | Table name          | nyctaxi-table     | 
  
    ![Added PowerBI output to the Job](media/image13.png)
