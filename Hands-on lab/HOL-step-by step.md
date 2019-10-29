@@ -215,7 +215,7 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  2. Select + Add > Power BI. Then fill the form with the following details and select **Authorize**.
  
 
-   | **Setting**         | **Suggested Value**|
+   | **Settings**         | **Suggested Value**|
    |---------------------|-------------------|
    | Output alias        | pbioutput         |
    | Dataset name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| nyctaxi           | 
