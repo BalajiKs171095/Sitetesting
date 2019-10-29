@@ -127,11 +127,11 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  4. (Optional) Query trips distribution for 60 days by pickup datetime, start on 2020-01-01.
 
       // Trips distribution for 60 days, by Pickup time
-    ``` 
+     ``` 
      Trips
      | where pickup_datetime < datetime(2020-01-01)
      | summarize min(pickup_datetime), max(pickup_datetime)
-      ```
+    ```
  5. (Optional)Query the min and max pickup datetime 
   
       // The newest and the oldest trip by pickup datetime 
