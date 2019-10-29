@@ -1,22 +1,24 @@
-#  Build solutions powered by real time analytics using Azure Stream Analytics and Azure Data Explorer
+Build solutions powered by real time analytics using Azure Stream Analytics and Azure Data Explorer
+--------------------------------------------------------------------------------------------------
  
 Looking to help your customers make business decisions with immediate impact based on real-time terabyte/petabyte of data in seconds? In this session, you will build a near-real-time analytical solution with Azure Data Explorer (ADX), which supports interactive adhoc queries of terabyte/petabyte data.  
  
 Walk away with a solution for your frustrated customers, so they can make immediate and impactful business decisions from their data using ADX.  
  
-**Contents**
+ **Contents**
  
-- Infrastructure
-- Pre-Exploration
-- Stream Analytics
-- Post-Exploration
-- Self-Study 
-  - Kusto Query Language (KQL)
-  - Power BI    
-     - Connect to Help cluster 
-     - Create Power BI report 
-           
-## Infrastructure  
+   - Infrastructure
+   - Pre-Exploration
+   - Stream Analytics
+   - Post-Exploration
+   - Self-Study 
+     - Kusto Query Language (KQL)
+     - Power BI    
+       - Connect to Help cluster 
+       - Create Power BI report 
+
+
+## Infrastructure ##
 
 1. Open Azure portal in private mode: https://portal.azure.com in the Virtual Machine (on the left-hand side)
 
