@@ -105,11 +105,11 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
 1. How many rows Trips table contain?
  
-// The trace table contains 1547471776 records
- ``` 
-Trips
-| count
- ``` 
+  // The trace table contains 1547471776 records
+   ``` 
+  Trips
+  | count
+   ``` 
 2. Take a 10 row sample of Trips
  
 // Sample Trips lines 
