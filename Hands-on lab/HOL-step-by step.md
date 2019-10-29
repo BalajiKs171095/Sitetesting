@@ -105,7 +105,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
    1.How many rows Trips table contain?
  
- ![#c5f015](// The trace table contains 175698341 records)
+// The trace table contains 175698341 records
  ``` 
 Trips
 | count
