@@ -158,6 +158,7 @@ Trips
    ![created Stream Analytics Job](media/image10.png)
 
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
+
    
    | **Settings**                   | **Suggested Value**          | **Description**|                                                   
    |------------------------------- |------------------------------|---------------------------------------------| 
