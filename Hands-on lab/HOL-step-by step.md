@@ -94,14 +94,16 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  ### Questions 
  
    1.How many rows Trips table contain?
- ```  
-// The trace table contains 175698341 records    
+  
+// The trace table contains 175698341 records  
+ ``` 
 Trips
 | count
  ``` 
    2.Take a 10 row sample of Trips
- ```  
+  
 // Sample Trips lines 
+ ``` 
 Trips
 | take 10
 ``` 
