@@ -37,15 +37,15 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
    ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image04.png)
     
-4. Select **Azure Database Explorer** from **Favorite** menu and select the pre-deployed **SAADXWorkshop cluster**.
+4. Select **Azure Database Explorer** from **Favorite** menu and select the pre-deployed **sharedadx cluster**.
    
    ![Image for selecting Azure Database Cluster.](media/image33.png)
     
-5. Select **Databases** from the left-hand menu, under **Data** , and then select **+SAADXworkshop** . 
+5. Select **Databases** from the left-hand menu, under **Data** , and then select **TaxiRides** . 
    
    ![Create a new database in the cluster.](media/image31.png)  
  
-6. In **Databases**, select your **SAADXWorkshop** and Select **Query**
+6. In **Databases**, select your **TaxiRides** and Select **Query**
  
    ![writing Query fo the data ingestion section.](media/image07.png)
     
