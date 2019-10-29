@@ -226,7 +226,7 @@ For this example, we will add a PowerBI output to your job and create a real-tim
 4. Click **Create**.
 	
 ### Run the job
-Navigate to the **Overview** page for your Stream Analytics job and select **Start**. It will take a minute or two for the job to start running in the cloud. Once it is running, it is continuously reading and processing input events flowing in from your event hub. In our case, it is continuously calculating the average passenger count and writing it to a streaming dataset in Power BI.
+Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process. input events flowing in from your event hub. In our case, it is continuously calculating the average passenger count and writing it to a streaming dataset in Power BI.
 
 #### Create the dashboard in Power BI
 1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. If the Stream Analytics job query outputs results, you see that your dataset is already created (under “**Datasets**” you should be able to see ‘***nyctaxi***’)
