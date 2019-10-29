@@ -157,7 +157,7 @@ Trips
    | **Event Hub name**             | **predefined EH for ASA**    | Select the name of your Event Hub.|
    | **Event Hub policy name**      | **predefined policy**        | Select the access policy that you created earlier.|	
  
-    ![created Stream Analytics Job with values](media/image11.png)
+   ![created Stream Analytics Job with values](media/image11.png)
  
  4. Click **Save**.
  
