@@ -173,7 +173,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
    ![created Stream Analytics Job with values](media/image11.png)
  
-4.&nbsp;&nbsp;&nbsp;Click **Save**.
+4.&nbsp;&nbsp;Click **Save**.
  
  ### Create queries to transform real-time data
  
