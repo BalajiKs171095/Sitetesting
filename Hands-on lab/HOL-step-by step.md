@@ -149,7 +149,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
 >**Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to transfer data between regions.
 
-![New Stream Analytics Job details view](media/image09.png)
+   ![New Stream Analytics Job details view](media/image09.png)
 
 3. Click **Create**.
 
