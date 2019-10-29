@@ -164,12 +164,14 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
 3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
    
-   | **Settings**                   | **Suggested Value**          | **Description**|                                                      |------------------------------- |------------------------------|---------------------------------------------| 
-   | **Input alias**                | **TaxiRide** &nbsp;&nbsp;&nbsp;| Enter a name to identify the job’s input.|   
-   | **Subscription**               | **Your subscription**&nbsp;&nbsp;&nbsp;| Select the Azure subscription that has the Event Hub you have created| 
-   | **Event Hub namespace**        | **predefined EH namespace**&nbsp;&nbsp;&nbsp;| Enter the name of the Event Hub namespace.|
-   | **Event Hub name**             | **predefined EH for ASA**&nbsp;&nbsp;&nbsp;| Select the name of your Event Hub.|
-   | **Event Hub policy name**      | **predefined policy**&nbsp;&nbsp;&nbsp;| Select the access policy that you created earlier.|
+  
+   | **Settings**                   | **Suggested Value**          | **Description**|                                                         
+   |------------------------------- |------------------------------|---------------------------------------------| 
+   | **Input alias**                | **TaxiRide**                 | Enter a name to identify the job’s input.|   
+   | **Subscription**               | **Your subscription**        | Select the Azure subscription that has the Event Hub you have created| 
+   | **Event Hub namespace**        | **predefined EH namespace**  | Enter the name of the Event Hub namespace.|
+   | **Event Hub name**             | **predefined EH for ASA**    | Select the name of your Event Hub.|
+   | **Event Hub policy name**      | **predefined policy**        | Select the access policy that you created earlier.|
  
    ![created Stream Analytics Job with values](media/image11.png)
  
