@@ -118,6 +118,7 @@ Trips
 | render timechart
  ```
  4.(Optional) Query trips distribution for 60 days by pickup datetime, start on 2017-12-01.
+ 
  // Trips distribution for 60 days, by Pickup time
   ```
 Trips
