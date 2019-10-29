@@ -41,7 +41,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
     
 4. Select **Azure Database Explorer** from **Favorite** menu and select the pre-deployed **SAADXWorkshop cluster**.
    
-   ![Image for selecting Azure Database Cluster.](media/image32.png)
+   ![Image for selecting Azure Database Cluster.](media/image33.png)
     
 5. Select **Databases** from the left-hand menu, under **Data** , and then select **+SAADXworkshop** . 
    
