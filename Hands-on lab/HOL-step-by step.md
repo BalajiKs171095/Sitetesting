@@ -170,7 +170,7 @@ In this step, you will create a query that analyzes the real time NYC taxi data.
  
 The following query calculates the average passenger count and average trip duration. 
 
- 1. Select **Query** under Job Topology and paste the following in the query text box.
+1. Select **Query** under Job Topology and paste the following in the query text box.
  
 ```
  --SELECT all relevant fields from TaxiRide Streaming input
@@ -192,7 +192,7 @@ FROM TripData Group By VendorId,tumblingwindow(minute,1)
  
 &nbsp;2.&nbsp;&nbsp;Click "Save query".
 
-&nbsp;&nbsp;3.&nbsp;Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
+&nbsp;3.&nbsp;Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
 
   ![Stream Analytics Job after running the query](media/image12.png)
 
@@ -212,7 +212,8 @@ In this step, you will configure a PowerBI output to your job. When the job runs
  
    ![Added PowerBI output to the Job](media/image13.png)
 	
-3.&nbsp;When you select **Authorize**, a pop-up window opens and you are asked to provide lab credentials to authenticate to                     your Power BI account. Once the authorization is successful, **Save** the settings.
+3.&nbsp;When you select **Authorize**, a pop-up window opens and you are asked to provide lab credentials to authenticate to your 
+Power BI account. Once the authorization is successful, **Save** the settings.
 	
 ### Run the job
 Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process incoming taxi ride data flowing in from your event hub. The job will the calculating the average passenger count and write it to a streaming dataset in Power BI.
