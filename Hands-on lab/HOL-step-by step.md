@@ -165,9 +165,9 @@ In this step, you will configure your job to receive real time Taxi Ride data st
  
 In this step, you will create a query that analyzes the real time NYC taxi data. Stream Analytics Query language is a subset of T-SQL. 
  
-The following query calculates the average passenger count and average trip duration. 
+The following query calculates the average passenger count and average trip duration.
 
-1. &nbsp;Select **Query** under Job Topology and paste the following in the query text box.
+1. Select **Query** under Job Topology and paste the following in the query text box.
  
 ```
  --SELECT all relevant fields from TaxiRide Streaming input
@@ -186,21 +186,21 @@ INTO pbioutput
 FROM TripData Group By VendorId,tumblingwindow(minute,1)
 
 ```
- 
-2. &nbsp;Click "Save query".
+2. Click "Save query".
 
-3. &nbsp;Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
+3. Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
 
   ![Stream Analytics Job after running the query](media/image12.png)
 
 ### Create job output
 
-In this step, you will configure a PowerBI output to your job. When the job runs in the cloud and processing incoming data continuously, the results of the query will be written to a PowerBI dataset with which you can create a dashboard. 
+In this step, you will configure a PowerBI output to your job. When the job runs in the cloud and processing incoming data continuously, the results of the query will be written to a PowerBI dataset with which you can create a dashboard.
 
-1. &nbsp;On the left menu, select **Outputs** under Job topology. Then, select **+Add** and choose **Power BI** from the dropdown menu.
-2. &nbsp;Select **+Add > Power BI**. Then fill the form with the following details and select **Authorize**.
+1. On the left menu, select **Outputs** under Job topology. Then, select **+Add** and choose **Power BI** from the dropdown menu.
+
+2. Select **+Add > Power BI**. Then fill the form with the following details and select **Authorize**.
  
-
+ 
    | **Settings**         | **Suggested Value**|
    |---------------------|-------------------|
    | Output alias        | pbioutput         |
@@ -208,8 +208,8 @@ In this step, you will configure a PowerBI output to your job. When the job runs
    | Table name          | nyctaxi-table     | 
  
    ![Added PowerBI output to the Job](media/image13.png)
-	
-3. &nbsp;When you select **Authorize**, a pop-up window opens and you are asked to provide lab credentials to authenticate to your 
+   
+3. When you select **Authorize**, a pop-up window opens and you are asked to provide lab credentials to authenticate to your 
 Power BI account. Once the authorization is successful, **Save** the settings.
 	
 ### Run the job
