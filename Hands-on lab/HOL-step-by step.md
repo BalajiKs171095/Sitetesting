@@ -148,7 +148,7 @@ On the Azure portal, go to **All resources** pane on the left. Find and select t
 
 In this step, you will configure your job to receive real time Taxi Ride data stream from an Event Hub.
 
-1. In the **Overview** section of the Stream Analytics job pane, click the **Inputs** box.
+1. In the **Overview** section of the Stream Analytics job pane, click the **Inputs** under **Job topology**.
 
    ![created Stream Analytics Job](media/image10.png)
 
