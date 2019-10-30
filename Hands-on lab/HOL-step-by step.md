@@ -162,7 +162,7 @@ In this step, you will configure your job to receive real time Taxi Ride data st
  
    ![created Stream Analytics Job with values](media/image11.png)
  
- 3. Click **Save**.
+3. Click **Save**.
  
  ### Create queries to transform real-time data
  
@@ -200,8 +200,8 @@ FROM TripData Group By VendorId,tumblingwindow(minute,1)
 
 In this step, you will configure a PowerBI output to your job. When the job runs in the cloud and processing incoming data continuously, the results of the query will be written to a PowerBI dataset with which you can create a dashboard. 
 
- 1. On the left menu, select **Outputs** under Job topology. Then, select **+Add** and choose **Power BI** from the dropdown menu.
- 2. Select **+Add > Power BI**. Then fill the form with the following details and select **Authorize**.
+1. On the left menu, select **Outputs** under Job topology. Then, select **+Add** and choose **Power BI** from the dropdown menu.
+2. Select **+Add > Power BI**. Then fill the form with the following details and select **Authorize**.
  
 
    | **Settings**         | **Suggested Value**|
@@ -212,7 +212,7 @@ In this step, you will configure a PowerBI output to your job. When the job runs
  
    ![Added PowerBI output to the Job](media/image13.png)
 	
-  3. When you select **Authorize**, a pop-up window opens and you are asked to provide lab credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
+3. When you select **Authorize**, a pop-up window opens and you are asked to provide lab credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
 	
 ### Run the job
 Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process incoming taxi ride data flowing in from your event hub. The job will the calculating the average passenger count and write it to a streaming dataset in Power BI.
