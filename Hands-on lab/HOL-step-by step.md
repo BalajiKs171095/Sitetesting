@@ -169,23 +169,22 @@ The following query calculates the average passenger count and average trip dura
 
 1. Select **Query** under Job Topology and paste the following in the query text box.
  
-```
- --SELECT all relevant fields from TaxiRide Streaming input
- WITH 
-TripData AS (
-    SELECT TRY_CAST(pickupLat AS float) as pickupLat,
-    TRY_CAST(pickupLon AS float) as pickupLon,
-    passengerCount, TripTimeinSeconds, 
-    pickupTime, VendorID
-    FROM TaxiRide timestamp by pickupTime
-    WHERE pickupLat > -90 AND pickupLat < 90 AND pickupLon > -180 AND pickupLon < 180
-)
+   ```
+    --SELECT all relevant fields from TaxiRide Streaming input
+    WITH 
+    TripData AS (
+        SELECT TRY_CAST(pickupLat AS float) as pickupLat,
+        TRY_CAST(pickupLon AS float) as pickupLon,
+        passengerCount, TripTimeinSeconds, 
+        pickupTime, VendorID
+        FROM TaxiRide timestamp by pickupTime
+        WHERE pickupLat > -90 AND pickupLat < 90 AND pickupLon > -180 AND pickupLon < 180
+    )
 
-SELECT avg(passengerCount) as AvgPassenger, avg(TripTimeinSeconds) as TripTimeinSeconds, system.timestamp as timestamps
-INTO pbioutput
-FROM TripData Group By VendorId,tumblingwindow(minute,1)
-
-```
+    SELECT avg(passengerCount) as AvgPassenger, avg(TripTimeinSeconds) as TripTimeinSeconds, system.timestamp as timestamps
+    INTO pbioutput
+    FROM TripData Group By VendorId,tumblingwindow(minute,1)
+     ```
 
 2. Click "Save query".
 3. Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
