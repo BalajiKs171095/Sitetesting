@@ -1,8 +1,6 @@
 # Build solutions powered by real time analytics using Azure Stream Analytics and Azure Data Explorer 
 
-Looking to help your customers make business decisions with immediate impact based on real-time terabyte/petabyte of data in seconds? In this session, you will build a near-real-time analytical solution with Azure Data Explorer (ADX), which supports interactive adhoc queries of terabyte/petabyte data.  
- 
-Walk away with a solution for your frustrated customers, so they can make immediate and impactful business decisions from their data using ADX.  
+Are you looking to help your customers make business decisions with immediate impact based on real-time terabytes or petabytes of data in seconds? In this session, you will build a near-real-time analytical solution with Azure Data Explorer (ADX), which supports interactive ad-hoc queries of large amounts of data.  
  
  **Contents**
  
@@ -16,10 +14,9 @@ Walk away with a solution for your frustrated customers, so they can make immedi
        - Connect to Help cluster 
        - Create Power BI report 
 
+## Infrastructure
 
-## Infrastructure ##
-
-1. Open the desktop shortcut which navigates you to the **Azure Portal** 
+1. Open the desktop shortcut that navigates you to the **Azure Portal** 
 
    ![+ Image of desktop icon.](media/image00.png "Azure Portal")
 
@@ -37,33 +34,35 @@ Walk away with a solution for your frustrated customers, so they can make immedi
   
 3. Drag **Azure Data Explorer Clusters** to the top of the **Favorite** menu.  
  
-   ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorite Menu.](media/image04.png)
+   ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorites Menu.](media/image04.png)
     
-4. Select **Azure Database Explorer** from **Favorite** menu and then select the pre-deployed **sharedadx cluster**.
+4. Select **Azure Database Explorer** from **Favorites** menu and select the pre-deployed **sharedadx** cluster.
    
    ![Image for selecting Azure Database Cluster.](media/image33.png)
     
-5. Select **Databases** from the left-hand menu, under **Data** , and then select **TaxiRides** . 
+5. Select **Data**>**Databases** from the left-hand menu, and then select **TaxiRides**. 
    
    ![Create a new database in the cluster.](media/image31.png)  
  
-6. In **Databases**, select **TaxiRides** and then select **Query**
+6. Select **Query**
  
    ![Image of the precreated cluster.](media/image07.png)
     
-7. In the Web UI, select **Open on Web UI**
+7. In the Web UI, select **Open on Web UI** to analyze your data in the Web UI.
    
    ![writing Query in ADX in Web UI .](media/image08.png)
     
-## Pre-Exploration 
-### Kusto Query Language (KQL) 
+## Pre-Exploration
+
+### Kusto Query Language (KQL)
+
 -  | **count**
 
-     >Counts records in input table (e.g. T)  
+     >Counts records in an input table (e.g. T)  
   
 -  | **take** 10	
               
-     >Get few records to become familiar with the data. No order ensured.  
+     >Get few records to become familiar with the data. No specific order.  
 
 -  | **where** Timestamp > ago(1) and UserId = ‘abdcdef’	
  	
@@ -79,7 +78,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
  
 -  | **render** timechart		
 	
-     >Plots the data (in KE and KWE) while exploring  
+     >Plots the data (in Web UI) while exploring  
  
 -  | **summarize** count(), dcount(Id) by Col1, Col2		
 	 
@@ -101,46 +100,50 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 	
       >Deals with unstructured data  
 	
-### Questions 
+ ### Questions
  
 1. How many rows Trips table contain?
- 
-   // The Trips  table contains 1.5B records
-   ``` 
-   Trips
-   | count
-   ``` 
+
+    ```kusto
+    // The table contains 1.5B records 
+    Trips
+    | count
+    ```
+
 2. Take a 10 row sample of Trips
  
-   // Sample Trips lines 
-   ```  
+    ```kusto 
+    // Sample trips 
     Trips
     | take 10
-   ```  
-3. Query passenger 50, 90 and 99 percentiles 
- 
-    // The passenger count per percentiles 
     ```
+
+3. Query 50, 90, and 99 percentiles of passengers.  
+
+    ```kusto
+    // The percentiles of passengers 
     Trips
     | summarize percentiles(passenger_count, 50, 90, 99)
-   ```
-4. (Optional) Query trips distribution for 60 days by pickup datetime, start on 2020-01-01.
-
-    // Trips distribution for 60 days, by Pickup time
-    ``` 
-   Trips 
-   | where pickup_datetime < datetime("2020-01-01") 
-   | summarize count() by bin(pickup_datetime, 1d) 
-   | render timechart
-   ```
-5. (Optional)Query the min and max pickup datetime 
-  
-    // The newest and the oldest trip by pickup datetime 
     ```
+
+4. (Optional) Query trips distribution for 60 days by pickup datetime, and start on 2020-01-01.
+
+    ```kusto 
+    // Trips distribution for 60 days, by pickup time
+    Trips
+    | where pickup_datetime < datetime("2020-01-01")
+    | summarize count() by bin(pickup_datetime, 1d)
+    | render timechart
+     ```
+
+5. (Optional) Query the min and max pickup datetime 
+  
+    ```kusto
+    // The newest and the oldest trip by pickup datetime 
     Trips
     | summarize min(pickup_datetime), max(pickup_datetime)
-   ``` 
-     
+    ```
+
 ## Stream Analytics
 On the Azure portal, go to **All resources** pane on the left. Find and select the **asa_nyctaxi** Stream Analytics job.
 
@@ -165,7 +168,7 @@ In this step, you will create a query that analyzes the real time NYC taxi data.
  
 The following query calculates the average passenger count and average trip duration.
 
-1. Select **Query** under Job Topology and paste the following in the query text box.
+1. Select **Job Topology** > **Query** and paste the following in the query text box.
  
    ```
     --SELECT all relevant fields from TaxiRide Streaming input
@@ -184,7 +187,7 @@ The following query calculates the average passenger count and average trip dura
     FROM TripData Group By VendorId,tumblingwindow(minute,1)
      ```
 
-2. Click "Save query".
+2. Click **Save query**.
 3. Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
 
    ![Stream Analytics Job after running the query](media/image12.png)
@@ -193,7 +196,7 @@ The following query calculates the average passenger count and average trip dura
 
 In this step, you will configure a PowerBI output to your job. When the job runs in the cloud and processing incoming data continuously, the results of the query will be written to a PowerBI dataset with which you can create a dashboard.
 
-1. On the left menu, select **Outputs** under Job topology. Then, select **+Add** and choose **Power BI** from the dropdown menu.
+1. On the left menu, select **Job Topology**>**Outputs**. Select **+ Add** and select **Power BI** from the dropdown menu.
  
 2. Select **+Add > Power BI**. Then fill the form with the following details and select **Authorize**.
  
@@ -203,8 +206,7 @@ In this step, you will configure a PowerBI output to your job. When the job runs
  
    ![Added PowerBI output to the Job](media/image13.png)
    
-3. When you select **Authorize**, a pop-up window opens and you are asked to provide lab credentials to authenticate to your 
-Power BI account. Once the authorization is successful, **Save** the settings.
+3. Provide lab credentials to authenticate to your Power BI account. Once the authorization is successful, select **Save**.
 	
 ### Run the job
 Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process incoming taxi ride data flowing in from your event hub. The job will the calculating the average passenger count and write it to a streaming dataset in Power BI.
@@ -216,7 +218,7 @@ Navigate to the **Overview** page of **Stream Analytics job** and select **Start
 
     ![Creating powerbi sign-in](media/image14.png)
 	
-3. Create a new dashboard and name it **NYC Taxi**.
+3. Create a new dashboard and name it **NYC Taxi**.  The Stream Analytics job query will output results into your created dataset in **Datasets**>***nyctaxi***.
 
     ![Creating powerbi dashboard](media/image15.png)
 	
@@ -232,78 +234,88 @@ Navigate to the **Overview** page of **Stream Analytics job** and select **Start
 
 7. Click **Next**.
 
-8. Fill in tile details like a title and subtitle and click **Apply**. Now you have a visualization for average no. of passengers in a trip.You can try playing around by creating a line chart which plots average passenger count over a period of time (x axis: timestamps and y axis: AvgPassenger).
+8. Complete tile details and select **Apply**. Now you have a visualization for average number of passengers in a trip. You can create a line chart which plots average passenger count over a period of time (x axis: timestamps, y axis: AvgPassenger).
 
 ## Post-Exploration
-1. Select **Azure Database Explorer** from Favorite menu and select the pre-deployed **nycXXX cluster**
+
+1. Select **Favorites**>**Azure Database Explorer** and select the pre-deployed nycXXX cluster.
     
     ![Image of selecting ADX cluster](media/image34.png) 
 	  
-2. Select **Databases** from the left-hand menu, under **Data** , and then select **TaxiRides**
+2. Select **Data**>**Databases** from the left-hand menu, and then select **TaxiRides**.
           
     ![Image of selecting ADX database cluster](media/image31.png)
 	   
-3. In **Databases**, select **TaxiRides** and Select **Query**
+3. Select **Query**.
          
     ![writing Query fo the data ingestion section](media/image07.png)
 	 
-4. In the **Web UI**, select **Open on Web UI**  
+4. Select **Open in Web UI**.  
         
     ![writing Query in ADX in Web UI .](media/image08.png)
-	
+
 ### Questions
-1. What was the trip distance of the last trip which pass the 90 percentiles? 
- ```  
+
+1. What was the trip distance of the last trip which pass the 90 percentile? 
+
+```kusto  
 Trips
 | where passenger_count > 4
 | top 1 by pickup_datetime
 | project fare_amount, vendor_id, passenger_count
+``` 
 
- ``` 
 2. What was the fare amount for the trip with the max passenger count? 
- ```  
+
+```kusto  
 Trips 
 | where passenger_count > 4  
 | top 1 by passenger_count  
 | project fare_amount, vendor_id, passenger_count 
+```  
 
- ```  
-3. How many trips this vendor has?  
- ``` 
+3. How many trips does this vendor have? 
+
+```kusto 
 Trips
 | summarize count() by vendor_id
  ```
+
  ```
 Trips
 | where vendor_id == 2
 | count
- ``` 
+``` 
 
-## Self-Study  
+## Self-Study 
+
 ### Azure Stream Analytics 
+
 1. You can implement more sophisticated analytics in the same NYC taxi scenario using concepts like reference data and geospatial analytics by following the steps [here](https://github.com/sidramadoss/reference-architectures/tree/master/data/streaming_asa#update-query-for-geospatial-analytics).
 2. Pluralsight [course](https://www.pluralsight.com/courses/azure-stream-analytics-understanding) on Azure Stream Analytics.
 3. Follow this step-by-step tutorial to implement [real-time fraud detection](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-real-time-fraud-detection).
   
-### Kusto Query Language (KQL)  
+### Kusto Query Language (KQL)
 
-Free online Course – Basics of KQL - <http://aka.ms/KQLPluralsight>
+Free online course – Basics of KQL - <http://aka.ms/KQLPluralsight>
 
-## Power BI  
+### Power BI
+
 Power BI is used to visualize the data. Note that Power BI is a visualization tool with data size limitations. Default: 500,000 records and 700MB data size. 
  
-## Connect to Help cluster  
+### Connect to the Help cluster
+
 1. Connect with the **Azure Credentials** from **Environment Details** tab.
 
     ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
-2. Open Power BI desktop, select **Get Data**, and **More…** Type **Data Explorer** in the search box.
+2. Open Power BI desktop, select **Get Data**, and **More…**.
 
     ![Power BI desktop for you can do data analytics.](media/image19.png)  
 
-3. Select **Azure Data Explorer (Kusto)** and **Connect** 
+3. Type **Data Explorer** in the search box. Select **Azure Data Explorer (Kusto)** and **Connect**. 
 
-    ![You can select the database to be analysed.](media/image20.png)  
+    ![You can select the database to be analyzed.](media/image20.png)  
 
 4. Enter the following properties (leave all other fields empty) and then select **OK**  
    Cluster: **Help**  
@@ -323,21 +335,22 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
 ### Create a Power BI report  
  
-1. Create a line chart with the total number of events, by putting **Start Time** in the Axis box (not in Date Hierarchy mode) and     **EventId** in the Values box.  
+1. Create a line chart with the total number of events, by putting **Start Time** in the **Axis** box (not in Date Hierarchy mode) and **EventId** in the **Values** box.  
  
-   ![Image which shows the environmrline chart of the database.](media/image24.png)  
+    ![Image which shows the line chart of the database.](media/image24.png)  
   
 2. Add a Map tile by putting **BeginLat** in the Latitude box and putting **BeginLon** in the Longitude box.  
  
-   ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longitue Box.](media/image25.png)  
+    ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longititue Box.](media/image25.png)  
  
 3. Create a Clustered column chart by putting **Event Type** in the Axis box and (count) **Event Id** in the value box.  
  
    ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
  
-4. Create 4 separate card tiles with **DeathDirect**, **DeathIndirect**, **InjuriesDirect** and **InjuriesIndirect** in the Fields box.  
-   ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
- 
+4. Create 4 separate card tiles with **DeathDirect**, **DeathIndirect**, **InjuriesDirect** and **InjuriesIndirect** in the **Fields** box.
+
+    ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
+
 5. Create a pie chart of reporting sources by putting the **Source** in the legend box and putting the (count) **EventId** in the values box.  
  
    ![Image which shows the pie chart with legend box value box.](media/image28.png)  
@@ -346,32 +359,35 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
    ![Image which shows the complete analysis of the database.](media/image29.png)  
  
- 
-### Power BI Connectors  
-1. Native Connector for Power BI
-    - **Native Connector-> data explorer -> Connect -> Preview Feature (accept) continue**
-    - Cluster: **demo12.westus**
-    - Database: **GitHub**
-    - Table: **GithubEvent**
-    
-    - **Import -> load data in advanced**
-	- Seamless browsing experience   
-	- Data size limitation  
-    - **(Click) Direct Query ->load data per request** 
-	- Load per request 
-	- Longer response time 
-  
-   - **Sign-in -> connect**
-   - **Data sample -> load** 
-   - **Drag ID** from the Fields on the right side of the screen 
-   - **Drag CreatedAt**
-   - **Drag CreatedAt** into **ID square** 
-2. Blank Query for Power BI
-   - **Get Data -> Blank Query** 
-   - **Kusto Explorer -> Tools -> Query to Power BI (Query & PBI adaptor)**
-   - **Connect - Organization account -> use your account** 
-   - **Click on -> Advanced editor -> Delete everything -> Paste everything**
-3. **MS-TDS (SQL)** client for **Power BI**
-   - (ODBS Connector) **End Point: Azure -> Azure SQL database** 
-     - Kusto Cluster as destination <https://docs.microsoft.com/en-us/azure/data-explorer/power-bi-sql-query>  
+### Power BI Connectors
+
+ **Native Connector for Power BI**
+
+   - Native Connector **->** data explorer **->** Connect **->** Preview Feature (accept) continue.
+   - Cluster: demo12.westus
+   - Database: GitHub
+   - Table: GithubEvent
+   - Import **->** load data in advanced 
+   - Seamless browsing experience   
+   - Data size limitation  
+   - **(Click) Direct Query ->load data per request** 
+   - Load per request 
+   - Longer response time 
+   - Sign-in **->** connect 
+   - Data sample **->** load 
+   - Drag ID from the Fields on the right side of the screen 
+   - Drag CreatedAt
+   - Drag CreatedAt into ID square
+
+**Blank Query for Power BI**
+
+   - Get Data **->** Blank Query 
+   - Kusto Explorer **->** Tools **->** Query to Power BI (Query & PBI adaptor)
+   - Connect - Organization account **->** use your account 
+   - Click on **->** Advanced editor **->** Delete everything **->** Paste everything
+
+**MS-TDS (SQL) client for Power BI**
+
+  - (ODBS Connector) End Point: Azure -> Azure SQL database 
+  - Kusto Cluster as destination <https://docs.microsoft.com/en-us/azure/data-explorer/power-bi-sql-query>  
 
