@@ -153,8 +153,8 @@ In this step, you will configure your job to receive real time Taxi Ride data st
 
 2. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information. Leave all other settings as default and then click on **Save**.
 
-    * Input alias: TaxiRide (Enter a name to identify the job’s input)
-    * Event Hub name: taxi-ride (Select the name of your Event Hub)
+    * Input alias: **TaxiRide** (Enter a name to identify the job’s input)
+    * Event Hub name: **taxi-ride** (Select the name of your Event Hub)
 
    ![created Stream Analytics Job with values](media/image11.png)
  
