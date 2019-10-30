@@ -162,7 +162,7 @@ In this step, you will configure your job to receive real time Taxi Ride data st
  
    ![created Stream Analytics Job with values](media/image11.png)
  
-&nbsp;3.&nbsp;Click **Save**.
+&nbsp;&nbsp;3.&nbsp;&nbsp;Click **Save**.
  
  ### Create queries to transform real-time data
  
@@ -190,9 +190,9 @@ FROM TripData Group By VendorId,tumblingwindow(minute,1)
 
 ```
  
-2.&nbsp;Click "Save query".
+&nbsp;2.&nbsp;&nbsp;Click "Save query".
 
-3. Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your  query against this data.
+&nbsp;&nbsp;3.&nbsp;Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
 
   ![Stream Analytics Job after running the query](media/image12.png)
 
