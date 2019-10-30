@@ -196,15 +196,12 @@ The following query calculates the average passenger count and average trip dura
 In this step, you will configure a PowerBI output to your job. When the job runs in the cloud and processing incoming data continuously, the results of the query will be written to a PowerBI dataset with which you can create a dashboard.
 
 1. On the left menu, select **Outputs** under Job topology. Then, select **+Add** and choose **Power BI** from the dropdown menu.
-
+ 
 2. Select **+Add > Power BI**. Then fill the form with the following details and select **Authorize**.
  
- 
-   | **Settings**         | **Suggested Value**|
-   |---------------------|-------------------|
-   | Output alias        | pbioutput         |
-   | Dataset name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| nyctaxi           | 
-   | Table name          | nyctaxi-table     | 
+    * Output alias: **pbioutput**
+    * Dataset name: **nyctaxi**
+    * Table name: **nyctaxi-table**    
  
    ![Added PowerBI output to the Job](media/image13.png)
    
