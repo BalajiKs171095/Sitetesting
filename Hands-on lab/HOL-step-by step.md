@@ -128,9 +128,10 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 
     // Trips distribution for 60 days, by Pickup time
     ``` 
-    Trips
-    | where pickup_datetime < datetime(2020-01-01)
-    | summarize min(pickup_datetime), max(pickup_datetime)
+   Trips 
+   | where pickup_datetime < datetime("2020-01-01") 
+   | summarize count() by bin(pickup_datetime, 1d) 
+   | render timechart
    ```
 5. (Optional)Query the min and max pickup datetime 
   
