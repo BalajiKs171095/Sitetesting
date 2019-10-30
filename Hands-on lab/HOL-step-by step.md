@@ -144,6 +144,7 @@ Walk away with a solution for your frustrated customers, so they can make immedi
 On the Azure portal, go to **All resources** pane on the left. Find and select the **asa_nyctaxi** Stream Analytics job.
 
 ### Configure job input
+
 In this step, you will configure your job to receive real time Taxi Ride data stream from an Event Hub.
 
 1. In the **Overview** section of the Stream Analytics job pane, click the **Inputs** box.
@@ -162,7 +163,7 @@ In this step, you will configure your job to receive real time Taxi Ride data st
  
  
 ### Create queries to transform real-time data
- 
+
 In this step, you will create a query that analyzes the real time NYC taxi data. Stream Analytics Query language is a subset of T-SQL. 
  
 The following query calculates the average passenger count and average trip duration.
@@ -186,11 +187,11 @@ INTO pbioutput
 FROM TripData Group By VendorId,tumblingwindow(minute,1)
 
 ```
-2. Click "Save query".
 
+2. Click "Save query".
 3. Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
 
-  ![Stream Analytics Job after running the query](media/image12.png)
+   ![Stream Analytics Job after running the query](media/image12.png)
 
 ### Create job output
 
