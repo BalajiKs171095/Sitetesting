@@ -344,7 +344,6 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
    ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
  
 4. Create 4 separate card tiles with **DeathDirect**, **DeathIndirect**, **InjuriesDirect** and **InjuriesIndirect** in the Fields box.  
- 
    ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
  
 5. Create a pie chart of reporting sources by putting the **Source** in the legend box and putting the (count) **EventId** in the values box.  
@@ -354,6 +353,7 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
 6. Now arrange the tiles on the canvas and you’re ready to slice and dice.  
  
    ![Image which shows the complete analysis of the database.](media/image29.png)  
+ 
  
 ### Power BI Connectors  
 1. Native Connector for Power BI
