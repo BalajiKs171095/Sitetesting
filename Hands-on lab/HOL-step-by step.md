@@ -316,25 +316,27 @@ Trips
 
 ## Self-Study  
   
-* Kusto Query Language (KQL) free online course – Basics of KQL - <http://aka.ms/KQLPluralsight>
+### Kusto Query Language (KQL)
 
-## Power BI
+Free online course – Basics of KQL - <http://aka.ms/KQLPluralsight>
+
+### Power BI
 
 Power BI is used to visualize the data. Note that Power BI is a visualization tool with data size limitations. Default: 500,000 records and 700MB data size. 
  
-## Connect to the Help cluster
+### Connect to the Help cluster
 
 1. Connect with the **Azure Credentials** from **Environment Details** tab.
 
     ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
-2. Open Power BI desktop, select **Get Data**, and **More…** Type **Data Explorer** in the search box.
+2. Open Power BI desktop, select **Get Data**, and **More…**.
 
     ![Power BI desktop for you can do data analytics.](media/image19.png)  
 
-3. Select **Azure Data Explorer (Kusto)** and **Connect** 
+3. Type **Data Explorer** in the search box. Select **Azure Data Explorer (Kusto)** and **Connect**. 
 
-    ![You can select the database to be analysed.](media/image20.png)  
+    ![You can select the database to be analyzed.](media/image20.png)  
 
 4. Enter the following properties (leave all other fields empty) and then select **OK**  
    Cluster: **Help**  
@@ -344,7 +346,7 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
     ![Required parameters to analyse the database.](media/image21.png) 
  
-5. Expand the Samples database and select StormEvents. If the table looks ok, select **Load**. To make changes, select **Edit**. 
+5. Expand the **Samples** database and select **StormEvents**. If the table looks ok, select **Load**. To make changes, select **Edit**. 
  
     ![Image which resemble the sample database.](media/image22.png)  
  
@@ -352,58 +354,61 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
     ![Image which shows the newly events added to the Power BI.](media/image23.png)  
  
- ### Create a Power BI report  
+### Create a Power BI report  
  
- 1. Create a line chart with the total number of events, by putting “Start Time” in the Axis box (not in Date Hierarchy mode) and **EventId** in the Values box.  
+1. Create a line chart with the total number of events, by putting **Start Time** in the **Axis** box (not in Date Hierarchy mode) and **EventId** in the **Values** box.  
  
-    ![Image which shows the environmrline chart of the database.](media/image24.png)  
+    ![Image which shows the line chart of the database.](media/image24.png)  
   
- 2. Add a Map tile by putting **“BeginLat”** in the Latitude box and putting **“BeginLon”** in the Longitude box.  
+2. Add a Map tile by putting **BeginLat** in the Latitude box and putting **BeginLon** in the Longitude box.  
  
-    ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longitue Box.](media/image25.png)  
+    ![Image which shows the line chart with added Map Title and with modified Latitude Box and Longititue Box.](media/image25.png)  
  
- 3. Create a Clustered column chart by putting **“Event Type”** in the Axis box and (count) **“Event Id”** in the value box.  
+3. Create a Clustered column chart by putting **Event Type** in the Axis box and (count) **Event Id** in the value box.  
  
     ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
  
- 4. Create 4 separate card tiles with **“DeathDirect”**, **“DeathIndirect”**, **“InjuriesDirect”** and **“InjuriesIndirect** in the Fields box.  
+4. Create 4 separate card tiles with **DeathDirect**, **DeathIndirect**, **InjuriesDirect** and **InjuriesIndirect** in the **Fields** box.  
  
     ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
  
- 5. Create a pie chart of reporting sources by putting the **“Source”** in the legend box and putting the (count) **“EventId”** in the values box.  
+5. Create a pie chart of reporting sources by putting the **Source** in the **legend** box and putting the (count) **EventId** in the values box.  
  
     ![Image which shows the pie chart with legend box value box.](media/image28.png)  
  
- 6. Now arrange the tiles on the canvas and you’re ready to slice and dice.  
+6. Now arrange the tiles on the canvas and you’re ready to slice and dice.  
  
     ![Image which shows the complete analysis of the database.](media/image29.png)  
  
- ### Power BI Connectors
+### Power BI Connectors
 
- 1. Native Connector for Power BI
-    - Native Connector **->** data explorer **->** Connect **->** Preview Feature (accept) continue.
-    - Cluster: demo12.westus
-    - Database: GitHub
-    - Table: GithubEvent
-    - Import **->** load data in advanced 
-	- Seamless browsing experience   
-	- Data size limitation  
-    - **(Click) Direct Query ->load data per request** 
-	- Load per request 
-	- Longer response time 
+ **Native Connector for Power BI**
+
+   - Native Connector **->** data explorer **->** Connect **->** Preview Feature (accept) continue.
+   - Cluster: demo12.westus
+   - Database: GitHub
+   - Table: GithubEvent
+   - Import **->** load data in advanced 
+   - Seamless browsing experience   
+   - Data size limitation  
+   - **(Click) Direct Query ->load data per request** 
+   - Load per request 
+   - Longer response time 
    - Sign-in **->** connect 
    - Data sample **->** load 
    - Drag ID from the Fields on the right side of the screen 
    - Drag CreatedAt
    - Drag CreatedAt into ID square
 
-2. Blank Query for Power BI
+**Blank Query for Power BI**
+
    - Get Data **->** Blank Query 
    - Kusto Explorer **->** Tools **->** Query to Power BI (Query & PBI adaptor)
    - Connect - Organization account **->** use your account 
    - Click on **->** Advanced editor **->** Delete everything **->** Paste everything
 
-3. MS-TDS (SQL) client for Power BI
-   - (ODBS Connector) End Point: Azure -> Azure SQL database 
-     - Kusto Cluster as destination <https://docs.microsoft.com/en-us/azure/data-explorer/power-bi-sql-query>  
+**MS-TDS (SQL) client for Power BI**
+
+  - (ODBS Connector) End Point: Azure -> Azure SQL database 
+  - Kusto Cluster as destination <https://docs.microsoft.com/en-us/azure/data-explorer/power-bi-sql-query>  
 
