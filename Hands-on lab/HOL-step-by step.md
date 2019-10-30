@@ -187,9 +187,9 @@ FROM TripData Group By VendorId,tumblingwindow(minute,1)
 
 ```
  
-&nbsp;2.&nbsp;&nbsp;Click "Save query".
+2. &nbsp;&nbsp;Click "Save query".
 
-&nbsp;3.&nbsp;Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
+3. &nbsp;&nbsp;Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
 
   ![Stream Analytics Job after running the query](media/image12.png)
 
