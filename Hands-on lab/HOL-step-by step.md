@@ -28,7 +28,7 @@ Are you looking to help your customers make business decisions with immediate im
       
    ![portal will bw opened with the credentials provide.](media/image02.png "Azure Portal")
       
-2. Select **All Services** from left hand pane, Search for **data explorer** and click the **star** icon.
+2. Select **All Services** from left hand pane, search for **data explorer** and click the **star** icon.
  
    ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
   
@@ -46,7 +46,7 @@ Are you looking to help your customers make business decisions with immediate im
  
 6. Select **Query**
  
-   ![writing Query fo the data ingestion section.](media/image07.png)
+   ![Image of the precreated cluster.](media/image07.png)
     
 7. In the Web UI, select **Open on Web UI** to analyze your data in the Web UI.
    
@@ -105,7 +105,7 @@ Are you looking to help your customers make business decisions with immediate im
 1. How many rows Trips table contain?
 
     ```kusto
-    // The trace table contains 175698341 records 
+    // The table contains 1.5B records 
     Trips
     | count
     ```
@@ -118,17 +118,25 @@ Are you looking to help your customers make business decisions with immediate im
     | take 10
     ```
 
-3. Query trips distribution for 60 days by pickup datetime, and start on 2017-12-01.
+3. Query 50, 90, and 99 percentiles of passengers.  
+
+    ```kusto
+    // The percentiles of passengers 
+    Trips
+    | summarize percentiles(passenger_count, 50, 90, 99)
+    ```
+
+4. (Optional) Query trips distribution for 60 days by pickup datetime, and start on 2020-01-01.
 
     ```kusto 
     // Trips distribution for 60 days, by pickup time
     Trips
-    | where pickup_datetime between (datetime(2017-12-01) .. 60d)
+    | where pickup_datetime < datetime("2020-01-01")
     | summarize count() by bin(pickup_datetime, 1d)
     | render timechart
      ```
 
-4. Query the min and max pickup datetime 
+5. (Optional) Query the min and max pickup datetime 
   
     ```kusto
     // The newest and the oldest trip by pickup datetime 
@@ -136,62 +144,35 @@ Are you looking to help your customers make business decisions with immediate im
     | summarize min(pickup_datetime), max(pickup_datetime)
     ```
 
-5. Query 50, 90, and 99 percentiles of passengers.  
-
-    ```kusto
-    // The percentiles of passenger counts 
-    Trips
-    | summarize percentiles(passenger_count, 50, 90, 99)
-    ```
-
 ## Stream Analytics
-
-### Create the Job
-
-1. In the Azure portal, click **Create a resource** > **Internet of Things** > **Stream Analytics job**.
-
-2. Name the job **asa_nyctaxi**, specify a subscription, resource group, and location.
-
-> [!TIP]
-> Place the job and Event Hub in the same region for best performance and so that you don't pay to transfer data between regions.
-
-![New Stream Analytics Job details view](media/image09.png)
-
-3. Select **Create**.
+On the Azure portal, go to **All resources** pane on the left. Find and select the **asa_nyctaxi** Stream Analytics job.
 
 ### Configure job input
 
-1. In the dashboard or the **All resources** pane, find and select the **asa_nyctaxi** Stream Analytics job.
+In this step, you will configure your job to receive real time Taxi Ride data stream from an Event Hub.
 
-2. In the **Overview** section of the Stream Analytics job pane, select the **Input** box.
+1. In the **Overview** section of the Stream Analytics job pane, click the **Inputs** under **Job topology**.
 
    ![created Stream Analytics Job](media/image10.png)
 
-3. Select **Add stream input** and select **Event Hub**. Then fill the **New input** page with the following information.
-   
-   | **Settings**                   | **Suggested Value**          | **Description**|                                                         
-   |------------------------------- |------------------------------|---------------------------------------------| 
-   | **Input alias**                | **TaxiRide**                 | Enter a name to identify the job’s input.|   
-   | **Subscription**               | **Your subscription**        | Select the Azure subscription that has the Event Hub you created| 
-   | **Event Hub namespace**        | **predefined EH namespace**  | Enter the name of the Event Hub namespace.|
-   | **Event Hub name**             | **predefined EH for ASA**    | Select the name of your Event Hub.|
-   | **Event Hub policy name**      | **predefined policy**        | Select the access policy that you created earlier.|
- 
+2. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information. Leave all other settings as default and then click on **Save**.
+
+    * Input alias: **TaxiRide** (Enter a name to identify the job’s input)
+    * Event Hub name: **taxi-ride** (Select the name of your Event Hub)
+
    ![created Stream Analytics Job with values](media/image11.png)
  
- 4. Click **Save**.
- 
 ### Create queries to transform real-time data
+
+In this step, you will create a query that analyzes the real time NYC taxi data. Stream Analytics Query language is a subset of T-SQL. 
  
-At this point, you have a Stream Analytics job set up to read an incoming data stream. The next step is to create a query that analyzes the data in real time. Stream Analytics supports a simple, declarative query model that describes transformations for real-time processing. The queries use a SQL-like language that has some extensions specific to Stream Analytics.
+The following query calculates the average passenger count and average trip duration.
+
+1. Select **Job Topology** > **Query** and paste the following in the query text box.
  
-You will use the query below as part of this exercise. The query calculates the average passenger count and average trip duration. In a later section, you'll configure an output sink and a query that writes the transformed data to that sink.
- 
-1. Select **Job Topology**>**Query** and paste the following in the query text box.
- 
-    ```
-     --SELECT all relevant fields from TaxiRide Streaming input
-     WITH 
+   ```
+    --SELECT all relevant fields from TaxiRide Streaming input
+    WITH 
     TripData AS (
         SELECT TRY_CAST(pickupLat AS float) as pickupLat,
         TRY_CAST(pickupLon AS float) as pickupLon,
@@ -200,44 +181,38 @@ You will use the query below as part of this exercise. The query calculates the 
         FROM TaxiRide timestamp by pickupTime
         WHERE pickupLat > -90 AND pickupLat < 90 AND pickupLon > -180 AND pickupLon < 180
     )
-    
+
     SELECT avg(passengerCount) as AvgPassenger, avg(TripTimeinSeconds) as TripTimeinSeconds, system.timestamp as timestamps
     INTO pbioutput
     FROM TripData Group By VendorId,tumblingwindow(minute,1)
-    ```
+     ```
 
-1. After saving this query, you can test it against sample input data. Select **Reset** to obtain sample input data. This looks for input data from Event Hub and shows it in the bottom pane.
+2. Click **Save query**.
+3. Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
 
-  ![Stream Analytics Job after running the query](media/image12.png)
+   ![Stream Analytics Job after running the query](media/image12.png)
 
-1. When you see data under **Input preview**, you can select **Test query**. The output will be displayed in **Test results**. When you have the query producing the expected results for test data, you can configure an output. When your job runs in the cloud, this is the destination to which it will write the results in real-time.
+### Create job output
 
-### Add PowerBI output
+In this step, you will configure a PowerBI output to your job. When the job runs in the cloud and processing incoming data continuously, the results of the query will be written to a PowerBI dataset with which you can create a dashboard.
 
-For this example, we will add a PowerBI output to your job and create a real-time dashboard that visualizes average passenger count over time.
-
- 1. On the left menu, select **Job Topology**>**Outputs**. Select **+ Add** and select **Power BI** from the dropdown menu.
- 2. Complete the form with the following details and select **Authorize**.
-
-    | **Setting**         | **Suggested Value**|
-    |---------------------|-------------------|
-    | Output alias        | pbioutput         |
-    | Dataset name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|nyctaxi| 
-    | Table name          | nyctaxi-table     | 
+1. On the left menu, select **Job Topology**>**Outputs**. Select **+ Add** and select **Power BI** from the dropdown menu.
  
-    ![Added PowerBI output to the Job](media/image13.png)
-	
-3. A pop-up window opens to provide credentials to authenticate your PowerBI account. Once the authorization is successful, select **Save**.
-
-4.Click **Create**.
+2. Select **+Add > Power BI**. Then fill the form with the following details and select **Authorize**.
+ 
+    * Output alias: **pbioutput**
+    * Dataset name: **nyctaxi**
+    * Table name: **nyctaxi-table**    
+ 
+   ![Added PowerBI output to the Job](media/image13.png)
+   
+3. Provide lab credentials to authenticate to your Power BI account. Once the authorization is successful, select **Save**.
 	
 ### Run the job
+Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process incoming taxi ride data flowing in from your event hub. The job will the calculating the average passenger count and write it to a streaming dataset in Power BI.
 
-Navigate to the **Overview** page for your Stream Analytics job and select **Start**. It will take a minute or two for the job to start running in the cloud. The job will continuously read and process input events flowing in from your Event Hub. It will calculate the average passenger count and write it to a streaming dataset in Power BI.
-
-## Create the dashboard in Power BI
-
-1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account.
+#### Create the dashboard in Power BI
+1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. If the Stream Analytics job query outputs results, you see that your dataset is already created (under “**Datasets**” you should be able to see ‘***nyctaxi***’)
 
 2. In your workspace, click **+ Create**.
 
@@ -281,7 +256,7 @@ Navigate to the **Overview** page for your Stream Analytics job and select **Sta
 
 ### Questions
 
-1. What was the fare amount of the last trip which passed the 90th percentile?
+1. What was the trip distance of the last trip which pass the 90 percentile? 
 
 ```kusto  
 Trips
@@ -299,22 +274,26 @@ Trips
 | project fare_amount, vendor_id, passenger_count 
 ```  
 
-3. How many trips does this vendor have?
+3. How many trips does this vendor have? 
 
 ```kusto 
 Trips
 | summarize count() by vendor_id
-```
+ ```
 
-----
- 
-```kusto
+ ```
 Trips
 | where vendor_id == 2
 | count
 ``` 
 
-## Self-Study  
+## Self-Study 
+
+### Azure Stream Analytics 
+
+1. You can implement more sophisticated analytics in the same NYC taxi scenario using concepts like reference data and geospatial analytics by following the steps [here](https://github.com/sidramadoss/reference-architectures/tree/master/data/streaming_asa#update-query-for-geospatial-analytics).
+2. Pluralsight [course](https://www.pluralsight.com/courses/azure-stream-analytics-understanding) on Azure Stream Analytics.
+3. Follow this step-by-step tutorial to implement [real-time fraud detection](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-real-time-fraud-detection).
   
 ### Kusto Query Language (KQL)
 
@@ -350,7 +329,7 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
     ![Image which resemble the sample database.](media/image22.png)  
  
-6. The new StormEvents table was added to the Power BI report.  
+6. The new **StormEvents** table was added to the Power BI report.  
  
     ![Image which shows the newly events added to the Power BI.](media/image23.png)  
  
@@ -366,19 +345,19 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
  
 3. Create a Clustered column chart by putting **Event Type** in the Axis box and (count) **Event Id** in the value box.  
  
-    ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
+   ![Image which shows the line chart with Event Type and Event Id.](media/image26.png)  
  
-4. Create 4 separate card tiles with **DeathDirect**, **DeathIndirect**, **InjuriesDirect** and **InjuriesIndirect** in the **Fields** box.  
- 
+4. Create 4 separate card tiles with **DeathDirect**, **DeathIndirect**, **InjuriesDirect** and **InjuriesIndirect** in the **Fields** box.
+
     ![Image which shows the line chart with DeathDirect, InjuriesDirect and InjuriesIndirect.](media/image27.png)  
+
+5. Create a pie chart of reporting sources by putting the **Source** in the legend box and putting the (count) **EventId** in the values box.  
  
-5. Create a pie chart of reporting sources by putting the **Source** in the **legend** box and putting the (count) **EventId** in the values box.  
- 
-    ![Image which shows the pie chart with legend box value box.](media/image28.png)  
+   ![Image which shows the pie chart with legend box value box.](media/image28.png)  
  
 6. Now arrange the tiles on the canvas and you’re ready to slice and dice.  
  
-    ![Image which shows the complete analysis of the database.](media/image29.png)  
+   ![Image which shows the complete analysis of the database.](media/image29.png)  
  
 ### Power BI Connectors
 
