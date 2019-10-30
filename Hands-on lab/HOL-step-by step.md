@@ -141,47 +141,36 @@ Walk away with a solution for your frustrated customers, so they can make immedi
      ``` 
      
 ## Stream Analytics
-### &nbsp;&nbsp;&nbsp;Create the Job
-
-1. In the Azure portal, click **Create a resource > Internet of Things > Stream Analytics job**.
-
-2. Name the job **asa_nyctaxi**, specify the subscription, resource group, and location.
-
->**Note**: It's a good idea to place the job and the event hub in the same region for best performance and so that you don't pay to transfer data between regions.
-
-   ![New Stream Analytics Job details view](media/image09.png)
-
-   3.&nbsp;Click **Create**.
+On the Azure portal, go to **All resources** pane on the left. Find and select the **asa_nyctaxi** Stream Analytics job.
 
 ### Configure job input
-1. In the dashboard or the **All resources** pane, find and select the **asa_nyctaxi** Stream Analytics job.
+In this step, you will configure your job to receive real time Taxi Ride data stream from an Event Hub.
 
-2. In the **Overview** section of the Stream Analytics job pane, click the **Inputs** box.
+1. In the **Overview** section of the Stream Analytics job pane, click the **Inputs** box.
 
    ![created Stream Analytics Job](media/image10.png)
 
-3. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
+2. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
    
   
    | **Settings**                   | **Suggested Value**          | **Description**|                                                        
    |------------------------------- |------------------------------|---------------------------------------------| 
    | **Input alias**                | **TaxiRide**                 | Enter a name to identify the job’s input.|   
-   | **Subscription**               | **Your subscription**        | Select the Azure subscription that has the Event Hub you have created| 
-   | **Event Hub namespace**        | **predefined EH namespace**  | Enter the name of the Event Hub namespace.|
-   | **Event Hub name**             | **predefined EH for ASA**    | Select the name of your Event Hub.|
-   | **Event Hub policy name**      | **predefined policy**        | Select the access policy that you created earlier.|
+   | **Event Hub name**             | **taxi-ride**    | Select the name of your Event Hub.|
+   
+   Leave all other settings as is.
  
    ![created Stream Analytics Job with values](media/image11.png)
  
- 4.&nbsp;Click **Save**.
+ 3. Click **Save**.
  
  ### Create queries to transform real-time data
  
-At this point, you have a Stream Analytics job set up to read an incoming data stream. The next step is to create a query that analyzes the data in real time. Stream Analytics supports a simple, declarative query model that describes transformations for real-time processing. The queries use a SQL-like language that has some extensions specific to Stream Analytics.
+In this step, you will create a query that analyzes the real time NYC taxi data. Stream Analytics Query language is a subset of T-SQL. 
  
- You will use the query below as part of this exercise. This query calculates the average passenger count and average trip duration. In a later section, you'll configure an output sink and a query that writes the transformed data to that sink.
- 
- Select **Query** under Job Topology and paste the following in the query text box.
+The following query calculates the average passenger count and average trip duration. 
+
+1. Select **Query** under Job Topology and paste the following in the query text box.
  
 ```
  --SELECT all relevant fields from TaxiRide Streaming input
@@ -201,13 +190,15 @@ FROM TripData Group By VendorId,tumblingwindow(minute,1)
 
 ```
  
- Once you have saved this query, you can test it against sample input data. You can obtain sample input data by selecting **Reset**. This looks for input data from event hub and shows it in the bottom pane.
+2. Click "Save query".
+
+3. Data displayed under “***Input preview***” is a sample of the data flowing into the Event Hub. Click **'Test query'** to test your query against this data.
 
   ![Stream Analytics Job after running the query](media/image12.png)
 
-Once you can see data under “***Input preview***”, you can select **Test query**. The output will be displayed in “***Test results***”. When you have the query producing the expected results for test data, you can configure an output. When your job runs in the cloud, this is the destination which it will write the results to in real-time.
+### Create job output
 
-For this example, we will add a PowerBI output to your job and create a real-time dashboard that visualizes average passenger count over time.
+In this step, you will configure a PowerBI output to your job. When the job runs in the cloud and processing incoming data continuously, the results of the query will be written to a PowerBI dataset with which you can create a dashboard. 
 
  1. On the left menu, select **Outputs** under Job topology. Then, select **+Add** and choose **Power BI** from the dropdown menu.
  2. Select **+Add > Power BI**. Then fill the form with the following details and select **Authorize**.
@@ -221,12 +212,10 @@ For this example, we will add a PowerBI output to your job and create a real-tim
  
    ![Added PowerBI output to the Job](media/image13.png)
 	
-  3.&nbsp;When you select **Authorize**, a pop-up window opens and you are asked to provide credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
-
-  4.&nbsp;Click **Create**.
+  3. When you select **Authorize**, a pop-up window opens and you are asked to provide lab credentials to authenticate to your Power BI account. Once the authorization is successful, **Save** the settings.
 	
 ### Run the job
-Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process input events flowing in from your event hub. In our case, it is continuously calculating the average passenger count and writing it to a streaming dataset in Power BI.
+Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process incoming taxi ride data flowing in from your event hub. The job will the calculating the average passenger count and write it to a streaming dataset in Power BI.
 
 #### Create the dashboard in Power BI
 1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. If the Stream Analytics job query outputs results, you see that your dataset is already created (under “**Datasets**” you should be able to see ‘***nyctaxi***’)
@@ -302,6 +291,10 @@ Trips
  ``` 
 
 ## Self-Study  
+### Azure Stream Analytics 
+1. You can implement more sophisticated analytics in the same NYC taxi scenario using concepts like reference data and geospatial analytics by following the steps [here](https://github.com/sidramadoss/reference-architectures/tree/master/data/streaming_asa#update-query-for-geospatial-analytics).
+2. Pluralsight [course](https://www.pluralsight.com/courses/azure-stream-analytics-understanding) on Azure Stream Analytics.
+3. Follow this step-by-step tutorial to implement [real-time fraud detection](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-real-time-fraud-detection).
   
 ### Kusto Query Language (KQL)  
 
