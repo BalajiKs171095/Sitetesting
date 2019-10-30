@@ -153,19 +153,18 @@ In this step, you will configure your job to receive real time Taxi Ride data st
 2. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information.
 
 
-   | Settings         | Suggested Value |&nbsp;&nbsp; Description   |
+   | Settings       &nbsp;&nbsp;  | Suggested Value &nbsp;&nbsp; | Description   |
    |------------------|-----------------|---------------|
-   | Input alias     | TaxiRide        | Enter a name to identify the job’s input  |
-   | Event Hub name &nbsp;&nbsp;| taxi-ride       | Select the name of your Event Hub|
-   
-   
+   | Input alias     &nbsp;&nbsp;| TaxiRide  &nbsp;&nbsp;      | Enter a name to identify the job’s input  |
+   | Event Hub name &nbsp;&nbsp;| taxi-ride  &nbsp;&nbsp;     | Select the name of your Event Hub|
+      
    Leave all other settings as default.
  
-   ![created Stream Analytics Job with values](media/image11.png)
+  ![created Stream Analytics Job with values](media/image11.png)
  
-3. Click **Save**.
+ 3. Click **Save**.
  
- ### Create queries to transform real-time data
+### Create queries to transform real-time data
  
 In this step, you will create a query that analyzes the real time NYC taxi data. Stream Analytics Query language is a subset of T-SQL. 
  
