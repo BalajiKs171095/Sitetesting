@@ -145,23 +145,6 @@ Are you looking to help your customers make business decisions with immediate im
     ```
 
 ## Stream Analytics
-On the Azure portal, go to **All resources** pane on the left. Find and select the **asa_nyctaxi** Stream Analytics job.
-
-### Configure job input
-
-In this step, you will configure your job to receive real time Taxi Ride data stream from an Event Hub.
-
-1. In the **Overview** section of the Stream Analytics job pane, click the **Inputs** under **Job topology**.
-
-   ![created Stream Analytics Job](media/image10.png)
-
-2. Click **Add stream input** and select **Event Hub**. Then fill the New input page with the following information. Leave all other settings as default and then click on **Save**.
-
-    * Input alias: **TaxiRide** (Enter a name to identify the job’s input)
-    * Event Hub name: **taxi-ride** (Select the name of your Event Hub)
-
-   ![created Stream Analytics Job with values](media/image11.png)
- 
 ### Create queries to transform real-time data
 
 In this step, you will create a query that analyzes the real time NYC taxi data. Stream Analytics Query language is a subset of T-SQL. 
