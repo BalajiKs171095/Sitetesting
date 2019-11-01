@@ -9,6 +9,7 @@ Are you looking to help your customers make business decisions with immediate im
    - Stream Analytics
    - Post-Exploration
    - Self-Study 
+     - Azure Stream Analytics (ASA)
      - Kusto Query Language (KQL)
      - Power BI    
        - Connect to Help cluster 
@@ -147,7 +148,8 @@ Are you looking to help your customers make business decisions with immediate im
 ## Stream Analytics
 ### Open Stream Analytics job
 
-1. Open [Azure Portal](https://portal.azure.com/?nonceErrorSeen=true#home) and open the stream analytics job (named "asa-nyctaxi") by searching for "asa" using the search box on the top. 
+1. Open [Azure Portal](https://portal.azure.com/?nonceErrorSeen=true#home) and open the stream analytics job (named "asa-nyctaxi") by searching for "asa" using the search box on the top. This job has been pre-configured to receive real-time taxi ride data.
+![Stream Analytics Job from list](media/searchasa.jpg)
 
 ### Create queries to analyze data in real-time data
 
@@ -175,7 +177,7 @@ The following query calculates the average passenger count and average trip dura
      ```
 
 2. Click **Save query**.
-3. Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data.
+3. Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data. You can resize the left pane to get a better view of the results at the bottom.
 
    ![Stream Analytics Job after running the query](media/image12.png)
 
@@ -198,12 +200,16 @@ In this step, you will configure a PowerBI output to your job. When the job runs
 ### Run the job
 Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process incoming taxi ride data flowing in from your event hub. The job will the calculating the average passenger count and write it to a streaming dataset in Power BI.
 
+Once you see that your job is running, you can move on to the next section.
+![ASA running](media/jobrunning.jpg)
+
 #### Create the dashboard in Power BI
-1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. If the Stream Analytics job query outputs results, you see that your dataset is already created (under “**Datasets**” you should be able to see ‘***nyctaxi***’)
+1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. And click on **My Workspace**.
+![ASA running](media/myworkspace.jpg)
 
 2. In your workspace, click **+ Create**.
 
-    ![Creating powerbi sign-in](media/image14.png)
+    ![Creating powerbi sign-in](media/createdash.jpg)
 	
 3. Create a new dashboard and name it **NYC Taxi**.  The Stream Analytics job query will output results into your created dataset in **Datasets**>***nyctaxi***.
 
@@ -217,11 +223,14 @@ Navigate to the **Overview** page of **Stream Analytics job** and select **Start
 
     ![Adding Datasets to PowerBI](media/image17.png)	
 	  
-6. Under **Visualization Type**, select **Card**, and then in the **Fields** list, select **AvgPassenger**.
+6. Under **Visualization Type**, select **Line Chart**. Set the fields as:
+    * Axis: **timestamps**
+    * Values: **AvgPassenger**
+    ![Adding vizualization](media/createviz.jpg)
 
 7. Click **Next**.
 
-8. Complete tile details and select **Apply**. Now you have a visualization for average number of passengers in a trip. You can create a line chart which plots average passenger count over a period of time (x axis: timestamps, y axis: AvgPassenger).
+8. Complete tile details and select **Apply**. Now you have a visualization for average number of passengers in a trip.
 
 ## Post-Exploration
 
