@@ -1,6 +1,6 @@
 # Build solutions powered by real time analytics using Azure Stream Analytics and Azure Data Explorer 
 
-Are you looking to help your customers make business decisions with immediate impact based on real-time terabytes or petabytes of data in seconds? In this session, you will build a near-real-time analytical solution with Azure Data Explorer (ADX), which supports interactive ad-hoc queries of large amounts of data.  
+Are you looking to help your customers make business decisions with immediate impact based on real-time terabytes or petabytes of data in seconds? In this session, you will build a near-real-time analytical solution with Azure Data Explorer (ADX) and Azure Stream Analytics. ADX enables you to do interactive ad-hoc queries of large amounts of data and Stream Analytics helps you analyze and process real-time data that can be used to trigger alerts and actions.
  
  **Contents**
  
@@ -145,7 +145,11 @@ Are you looking to help your customers make business decisions with immediate im
     ```
 
 ## Stream Analytics
-### Create queries to transform real-time data
+### Open Stream Analytics job
+
+1. Open [Azure Portal](https://portal.azure.com/?nonceErrorSeen=true#home) and open the stream analytics job (named "asa-nyctaxi") by searching for "asa" using the search box on the top. 
+
+### Create queries to analyze data in real-time data
 
 In this step, you will create a query that analyzes the real time NYC taxi data. Stream Analytics Query language is a subset of T-SQL. 
  
@@ -167,7 +171,7 @@ The following query calculates the average passenger count and average trip dura
 
     SELECT avg(passengerCount) as AvgPassenger, avg(TripTimeinSeconds) as TripTimeinSeconds, system.timestamp as timestamps
     INTO pbioutput
-    FROM TripData Group By VendorId,tumblingwindow(minute,1)
+    FROM TripData Group By VendorId,hoppingwindow(second,60,5)
      ```
 
 2. Click **Save query**.
