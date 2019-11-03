@@ -246,7 +246,8 @@ Once you see that your job is running, you can move on to the next section.
 
 ### Questions
 
- 1. What was the trip distance of the last trip which pass the 90 percentile? 
+
+ 1.What was the trip distance of the last trip which pass the 90 percentile? 
 
 ```kusto  
 Trips
@@ -254,13 +255,13 @@ Trips
 | top 1 by pickup_datetime
 | project fare_amount, vendor_id, passenger_count
 ``` 
- 2. Query 50, 90 and 99 percentiles of passengers for stream trips table.
+ 2.Query 50, 90 and 99 percentiles of passengers for stream trips table.
 ```kusto  
 Trips 
 | summarize percentiles(passenger_count, 50, 90, 99)
 ```  
 
- 3. Query 50, 90 and 99 percentiles of passengers for stream and historical trips tables.
+ 3.Query 50, 90 and 99 percentiles of passengers for stream and historical trips tables.
 
 ```kusto  
 Trips 
@@ -268,16 +269,16 @@ Trips
 | summarize percentiles(passenger_count, 50, 90, 99)
 ```  
 
- 4. What was the fare amount for the trip with the max passenger count? 
+ 4.What was the trip distance for the trip with the max passenger count? 
 
 ```kusto  
 Trips 
 | where passenger_count > 4  
 | top 1 by passenger_count  
-| project fare_amount, vendor_id, passenger_count 
+| project trip_distance, vendor_id, passenger_count 
 ```  
 
- 5. How many trips does this vendor have? 
+ 5.How many trips does this vendor have? 
 
 ```kusto 
 Trips
@@ -286,7 +287,7 @@ Trips
 
  ```
 Trips
-| where vendor_id == 2
+| where vendor_id == 'VTS'
 | count
 ``` 
 
