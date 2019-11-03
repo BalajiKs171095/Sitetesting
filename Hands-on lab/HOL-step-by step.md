@@ -17,9 +17,7 @@ Are you looking to help your customers make business decisions with immediate im
 
 ## Infrastructure
 
-1. Open the desktop shortcut that navigates you to the **Azure Portal** 
-
-   ![+ Image of desktop icon.](media/image00.png "Azure Portal")
+1. Launch an InPrivate Browser Window from your Lab Machine. You can do this by right clicking on edge browser icon in your taskbar. 
 
    - Connect with the **Azure Credentials** from **Environment Details** tab.
    
