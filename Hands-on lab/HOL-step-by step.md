@@ -30,24 +30,20 @@ Are you looking to help your customers make business decisions with immediate im
 2. Select **All Services** from left hand pane, search for **data explorer** and click the **star** icon.
  
    ![Image which shows the Dashboard, can select the Azure Data Explorer from the list.](media/image03.png)
-  
-3. Drag **Azure Data Explorer Clusters** to the top of the **Favorite** menu.  
- 
-   ![Image which shows how to drag the Azure Data Explorer Clusters to the top of Favorites Menu.](media/image04.png)
     
-4. Select **Azure Database Explorer** from **Favorites** menu and select the pre-deployed **sharedadx** cluster.
+3. Select **Azure Database Explorer** from **Favorites** menu and select the pre-deployed **sharedadx** cluster.
    
    ![Image for selecting Azure Database Cluster.](media/image33.png)
     
-5. Select **Data**>**Databases** from the left-hand menu, and then select **TaxiRides**. 
+4. Select **Data**>**Databases** from the left-hand menu, and then select **TaxiRides**. 
    
    ![Create a new database in the cluster.](media/image31.png)  
  
-6. Select **Query**
+5. Select **Query**
  
    ![Image of the precreated cluster.](media/image07.png)
     
-7. In the Web UI, select **Open on Web UI** to analyze your data in the Web UI.
+6. In the Web UI, select **Open on Web UI** to analyze your data in the Web UI.
    
    ![writing Query in ADX in Web UI .](media/image08.png)
     
