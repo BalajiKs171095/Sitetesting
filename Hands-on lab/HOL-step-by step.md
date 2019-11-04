@@ -143,7 +143,7 @@ Are you looking to help your customers make business decisions with immediate im
 ### Open Stream Analytics job
 
 1. Open [Azure Portal](https://portal.azure.com/?nonceErrorSeen=true#home) and open the stream analytics job (named "asa-nyctaxi") by searching for "asa" using the search box on the top. This job has been pre-configured to receive real-time taxi ride data.
-![Stream Analytics Job from list](media/asasearch.jpg)
+![Stream Analytics Job from list](media/asasearch.png)
 
 ### Create queries to analyze data in real-time data
 
@@ -195,7 +195,7 @@ In this step, you will configure a PowerBI output to your job. When the job runs
 Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process incoming taxi ride data flowing in from your event hub. The job will the calculating the average passenger count and write it to a streaming dataset in Power BI.
 
 Once you see that your job is running, you can move on to the next section.
-![ASA running](media/jobrunning.jpg)
+![ASA running](media/jobrunning.png)
 
 #### Create the dashboard in Power BI
 1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. And click on **My Workspace**.
