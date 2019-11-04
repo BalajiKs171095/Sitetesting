@@ -143,7 +143,7 @@ Are you looking to help your customers make business decisions with immediate im
 ### Open Stream Analytics job
 
 1. Open [Azure Portal](https://portal.azure.com/?nonceErrorSeen=true#home) and open the stream analytics job (named "asa-nyctaxi") by searching for "asa" using the search box on the top. This job has been pre-configured to receive real-time taxi ride data.
-![Stream Analytics Job from list](media/searchasa.jpg)
+![Stream Analytics Job from list](media/asasearch.jpg)
 
 ### Create queries to analyze data in real-time data
 
