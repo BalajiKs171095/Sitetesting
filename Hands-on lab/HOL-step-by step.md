@@ -213,7 +213,7 @@ Once you see that your job is running, you can move on to the next section.
 
     ![Adding data to Custom Stream Data](media/image16.png)
 	
-5. Under **YOUR DATSETS**, select your dataset and then click **Next**.	
+5. Under **YOUR DATASETS**, select your dataset and then click **Next**.	
 
     ![Adding Datasets to PowerBI](media/image17.png)	
 	  
