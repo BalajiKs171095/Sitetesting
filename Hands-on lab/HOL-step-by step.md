@@ -269,7 +269,7 @@ Once you see that your job is running, you can move on to the next section.
 	| summarize percentiles(passenger_count, 50, 90, 99)
 	```  
 
- 4. What was the trip distance for the trip with the max passenger count? 
+4. What was the trip distance for the trip with the max passenger count? 
 
 	```kusto  
 	Trips 
@@ -278,7 +278,7 @@ Once you see that your job is running, you can move on to the next section.
 	| project trip_distance, vendor_id, passenger_count 
 	```  
 
- 5. How many trips does this vendor have? 
+5. How many trips does this vendor have? 
 
 	```kusto 
 	Trips
