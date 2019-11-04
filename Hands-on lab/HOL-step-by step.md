@@ -173,7 +173,7 @@ The following query calculates the average passenger count and average trip dura
 2. Click **Save query**.
 3. Data displayed under ***Input preview*** is a sample of the data flowing into the Event Hub. Click **Test query** to test your query against this data. You can resize the left pane to get a better view of the results at the bottom.
 
-   ![Stream Analytics Job after running the query](media/image12.png)
+   ![Stream Analytics Job after running the query](media/testquery.png)
 
 ### Create job output
 
