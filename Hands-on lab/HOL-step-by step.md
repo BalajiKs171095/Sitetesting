@@ -222,7 +222,7 @@ Once you see that your job is running, you can move on to the next section.
 6. Under **Visualization Type**, select **Line Chart**. Set the fields as:
     * Axis: **timestamps**
     * Values: **AvgPassenger**
-    ![Adding vizualization](media/createviz.jpg)
+    ![Adding vizualization](media/createviz.png)
 
 7. Click **Next**.
 
