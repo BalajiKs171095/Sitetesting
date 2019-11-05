@@ -205,7 +205,7 @@ Once you see that your job is running, you can move on to the next section.
 
 2. In your workspace, click **+ Create**.
 
-    ![Creating powerbi sign-in](media/createdash.jpg)
+    ![Creating powerbi sign-in](media/createdash.png)
 	
 3. Create a new dashboard and name it **NYC Taxi**.  The Stream Analytics job query will output results into your created dataset in **Datasets**>***nyctaxi***.
 
