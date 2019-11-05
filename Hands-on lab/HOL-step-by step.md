@@ -181,16 +181,18 @@ In this step, you will configure a PowerBI output to your job. When the job runs
 
 1. On the left menu, select **Job Topology**>**Outputs**. Select **+ Add** and select **Power BI** from the dropdown menu.
  
-2. Select **+Add > Power BI**. Then fill the form with the following details and select **Authorize**.
+2. Select **+Add > Power BI** and select **Authorize**. Provide lab credentials to authenticate to your Power BI account. 
+   ![Authorize PBI](media/authorizepbi.jpg)
+
+3. Once the authorization is successful, configure the following and select **Save** 
  
     * Output alias: **pbioutput**
     * Dataset name: **nyctaxi**
-    * Table name: **nyctaxi-table**    
+    * Table name: **nyctaxi-table** 
+    * Authentication mode: **user token**
  
-   ![Added PowerBI output to the Job](media/image13.png)
+   ![Added PowerBI output to the Job](media/pbiop.jpg)
    
-3. Provide lab credentials to authenticate to your Power BI account. Once the authorization is successful, select **Save**.
-	
 ### Run the job
 Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process incoming taxi ride data flowing in from your event hub. The job will the calculating the average passenger count and write it to a streaming dataset in Power BI.
 
