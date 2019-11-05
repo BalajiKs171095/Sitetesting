@@ -217,7 +217,7 @@ Once you see that your job is running, you can move on to the next section.
 	
 5. Under **YOUR DATASETS**, select your dataset and then click **Next**.	
 
-    ![Adding Datasets to PowerBI](media/image17.png)	
+    ![Adding Datasets to PowerBI](media/yourdataset.png)	
 	  
 6. Under **Visualization Type**, select **Line Chart**. Set the fields as:
     * Axis: **timestamps**
