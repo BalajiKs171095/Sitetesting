@@ -200,8 +200,12 @@ Once you see that your job is running, you can move on to the next section.
 ![ASA running](media/jobrunning.png)
 
 #### Create the dashboard in Power BI
-1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your lab Azure username and password. You can copy them from **Environment Details** tab. And click on **My Workspace**.
-![ASA running](media/myworkspace.jpg)
+1. Go to [Powerbi.com](https://powerbi.com/) 
+   - Connect with the **Azure Credentials** from **Environment Details** tab.
+   
+   ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
+   
+   ![ASA running](media/myworkspace.jpg)
 
 2. In your workspace, click **+ Create**.
 
@@ -309,13 +313,13 @@ Free online course – Basics of KQL - <http://aka.ms/KQLPluralsight>
 
 Power BI is used to visualize the data. Note that Power BI is a visualization tool with data size limitations. Default: 500,000 records and 700MB data size. 
  
-### Connect to the Help cluster
+### [Optional] Connect to the Help cluster
 
 1. Connect with the **Azure Credentials** from **Environment Details** tab.
 
     ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
-2. Open Power BI desktop, select **Get Data**, and **More…**.
+2. Please download and install PowerBI Desktop in your local machine. One Installed Launch PowerBI Desktop and select **Get Data**, and **More…**.
 
     ![Power BI desktop for you can do data analytics.](media/image19.png)  
 
