@@ -191,7 +191,7 @@ In this step, you will configure a PowerBI output to your job. When the job runs
     * Table name: **nyctaxi-table** 
     * Authentication mode: **user token**
  
-   ![Added PowerBI output to the Job](media/pbiop.jpg)
+   ![Added PowerBI output to the Job](media/pbiop.png)
    
 ### Run the job
 Navigate to the **Overview** page of **Stream Analytics job** and select **Start**. It will take a minute or two for the job to get suceeded. Once it is succeeded, it would continuously read and process incoming taxi ride data flowing in from your event hub. The job will the calculating the average passenger count and write it to a streaming dataset in Power BI.
