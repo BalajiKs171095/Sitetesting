@@ -200,7 +200,7 @@ Once you see that your job is running, you can move on to the next section.
 ![ASA running](media/jobrunning.png)
 
 #### Create the dashboard in Power BI
-1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your work or school account. And click on **My Workspace**.
+1. Go to [Powerbi.com](https://powerbi.com/) and sign in with your lab Azure username and password. You can copy them from **Environment Details** tab. And click on **My Workspace**.
 ![ASA running](media/myworkspace.jpg)
 
 2. In your workspace, click **+ Create**.
