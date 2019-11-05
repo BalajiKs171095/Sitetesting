@@ -182,7 +182,7 @@ In this step, you will configure a PowerBI output to your job. When the job runs
 1. On the left menu, select **Job Topology**>**Outputs**. Select **+ Add** and select **Power BI** from the dropdown menu.
  
 2. Select **+Add > Power BI** and select **Authorize**. Provide lab credentials to authenticate to your Power BI account. 
-   ![Authorize PBI](media/authorizepbi.jpg)
+   ![Authorize PBI](media/authorizepbi.png)
 
 3. Once the authorization is successful, configure the following and select **Save** 
  
