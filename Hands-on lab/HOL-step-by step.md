@@ -327,7 +327,7 @@ Power BI is used to visualize the data. Note that Power BI is a visualization to
 
     ![+ Create a resource is highlighted in the navigation pane of the Azure portal, and Everything is highlighted to the right.](media/image01.png "Azure Portal")
 
-2. Please download and install PowerBI Desktop in your local machine. One Installed Launch PowerBI Desktop and select **Get Data**, and **More…**.
+2. Please download and install PowerBI Desktop in your local machine. You can download from https://powerbi.microsoft.com/en-us/downloads/ . One Installed Launch PowerBI Desktop and select **Get Data**, and **More…**.
 
     ![Power BI desktop for you can do data analytics.](media/image19.png)  
 
